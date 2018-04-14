@@ -26,8 +26,63 @@
       </nav>
     </header>
 
+    <main class="page__main">
+      <h1 class="page__title--form">Подбор программы</h1>
+      <p class="page__text">
+        Заполните анкету и  мы подберем программу питания для вашего кота
+      </p>
+      <form class="program-form">
+        <section class="form__block">
+          <h2 class="visually-hidden">Личные данные кота<h2>
+          <label class="block__item--label" for="cat-name">Имя:*</label>
+          <input class="block__item--input" type="text" id="cat-name" name="cat-name" placeholder="Барсик" required>
+          <label class="block__item--label" for="cat-weight">Вес (кг):*</label>
+          <input class="block__item--input" type="text" id="cat-weight" name="cat-weight" placeholder="7" required>
+          <label class="block__item--label" for="cat-age">Возраст (лет):</label>
+          <input class="block__item--input" type="text" id="cat-age" name="cat-age" placeholder="7">
+        </section>
+        <section class="form__block form__block--border">
+          <h2 class="visually-hidden">Цели</h2>
+          <input class="block__item--radio" type="radio" id="slim" name="program" checked>
+          <label class="block__item--label" for="slim">Похудение</label>
+          <input class="block__item--radio" type="radio" id="gain" name="program">
+          <label class="block__item--label" for="gain">Набор массы</label>
+          <input class="block__item--radio" type="radio" id="unknown" name="program">
+          <label class="block__item--label" for="unknown">Не знаю (нужен ваш совет)</label>
+        </section>
+        <section class="form__block">
+          <h2 class="block__title">Контактные данные(владельца кота)</h2>
+          <label class="block__item--label" for="email">E-mail:*</label>
+          <input class="block__item--input" type="email" id="email" name="email" placeholder="kuklachev@gmail.com" required>
+          <label class="block__item--label" for="phone">E-mail:*</label>
+          <input class="block__item--input" type="tel" id="phonel" name="phone" placeholder="8 (960) 900-60-90" required>
+        </section>
+        <section class="form__block">
+          <h2 class="block__title">Комментарий</h2>
+          <label class="visually-hidden" for="comment"></label>
+          <textarea class="block__item--textarea" id="comment" name="comment" cols="28" rows="4" placeholder="Расскажите обо всех повадках кота"></textarea>
+        </section>
+        <section class="form__block">
+          <h2 class="block__title">Дополнительно</h2>
+          <input class="block__item--checkbox" type="checkbox" id="sweetener" name="additional" checked>
+          <label class="block__item--label" for="sweetener">Сахарозаменитель</label>
+          <input class="block__item--checkbox" type="checkbox" id="water" name="additional">
+          <label class="block__item--label" for="water">Питьевая вода</label>
+          <input class="block__item--checkbox" type="checkbox" id="milk" name="additional">
+          <label class="block__item--label" for="milk">Молоко</label>
+          <input class="block__item--checkbox" type="checkbox" id="vitamins" name="additional">
+          <label class="block__item--label" for="vitamins">Витамины</label>
+        </section>
+        <button class="button button--submit" type="submit">Отправить заявку</button>
+        <p class="form__text">
+          * &#8212; Обязательные поля
+        </p>
+      </form>
+    </main>
+
     <footer class="page-footer">
         <section class="contacts">
+          <h2 class="visually-hidden">Контакты</h2>
             <div class="contacts__text">
                 <p class="contacts__text--title">
                     Приглашаем к сотрудничеству дилеров!
@@ -43,6 +98,7 @@
         </section>
         <a class="page-footer__item footer-logo"><img class="logo-header" src="http://placehold.it/101x18" alt="Cat Energy" width="101" height="18"></a>
         <section class="page-footer__item social">
+          <h2 class="visually-hidden">Социальные сети</h2>
             <ul class="social__list">
                 <li class="social__item">
                     <a class="social__item--vk">Вконтакте</a>
@@ -56,10 +112,11 @@
             </ul>
         </section>
         <section class="page-footer__item developers">
-            <a class="developers__link">
-                HTML Academy
-                <img class="developers__logo" src="http://placehold.it/27x34" alt="HTML Academy" width="27" height="38">
-            </a>
+          <h2 class="visually-hidden">Разработчики</h2>
+          <a class="developers__link">
+              HTML Academy
+              <img class="developers__logo" src="http://placehold.it/27x34" alt="HTML Academy" width="27" height="38">
+          </a>
         </section>
     </footer>
   </body>

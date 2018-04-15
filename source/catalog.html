@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
   </head>
-  <body>
+  <body class="page">
     <header class="page-header">
       <a class="page-header__logo">
         <img class="page-header__logo-image" src="http://placehold.it/33x38" alt="Cat Energy" width="33" height="38">
@@ -27,8 +27,9 @@
     </header>
 
     <main class="page__main">
-      <h1 class="page__title--catalog">Каталог продукции</h1>
+      <h1 class="visually-hidden">Каталог магазина Кэт Энерджи</h1>
       <section class="catalog">
+        <h2 class="catalog__title">Каталог продукции</h2>
         <ul class="catalog__list">
           <li class="catalog__item">
             <div class="item">
@@ -261,7 +262,7 @@
           </li>
         </ul>
         <div class="additional__promo">
-          <p class="promo__text">
+          <p class="additional__text">
             Закажите все и получите чехол для кота в подарок!
           </p>
         </div>
@@ -272,16 +273,16 @@
         <section class="contacts">
           <h2 class="visually-hidden">Контакты</h2>
             <div class="contacts__text">
-                <p class="contacts__text--title">
+                <p class="contacts__promo">
                     Приглашаем к сотрудничеству дилеров!
                 </p>
-                <p class="contacts__text--address">
+                <p class="contacts__address">
                     ул. Большая Конюшенная, д.19/8<br>
                     <span class="contacts__city">Санкт-Петербург</span>
                 </p>
             </div>
             <div class="contacts__map">
-              <img class="map__iframe" src="http://placehold.it/320x365" alt="ул. Большая Конюшенная, д.19/8, Санкт-Петербург" width="320" height="365">
+              <img class="contacts__map-image" src="http://placehold.it/320x365" alt="ул. Большая Конюшенная, д.19/8, Санкт-Петербург" width="320" height="365">
             </div>
         </section>
         <a class="page-footer__item footer-logo"><img class="logo-header" src="http://placehold.it/101x18" alt="Cat Energy" width="101" height="18"></a>
@@ -289,13 +290,13 @@
           <h2 class="visually-hidden">Социальные сети</h2>
             <ul class="social__list">
                 <li class="social__item">
-                    <a class="social__item--vk">Вконтакте</a>
+                    <a class="social__link social__link--vk">Вконтакте</a>
                 </li>
                 <li class="social__item">
-                    <a class="social__item--insta">Instagram</a>
+                    <a class="social__link social__link--insta">Instagram</a>
                 </li>
                 <li class="social__item">
-                    <a class="social__item--fb">Facebook</a>
+                    <a class="social__link social__link--fb">Facebook</a>
                 </li>
             </ul>
         </section>

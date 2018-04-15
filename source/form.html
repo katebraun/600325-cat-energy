@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
   </head>
-  <body>
+  <body class="page">
     <header class="page-header">
       <a class="page-header__logo">
         <img class="page-header__logo-image" src="http://placehold.it/33x38" alt="Cat Energy" width="33" height="38">
@@ -27,54 +27,54 @@
     </header>
 
     <main class="page__main">
-      <h1 class="page__title--form">Подбор программы</h1>
+      <h1 class="page__title page__title--form">Подбор программы</h1>
       <p class="page__text">
         Заполните анкету и  мы подберем программу питания для вашего кота
       </p>
       <form class="program-form">
-        <section class="form__block">
+        <section class="program-form__block form-block">
           <h2 class="visually-hidden">Личные данные кота</h2>
-          <label class="block__item--label" for="cat-name">Имя:*</label>
-          <input class="block__item--input" type="text" id="cat-name" name="cat-name" placeholder="Барсик" required>
-          <label class="block__item--label" for="cat-weight">Вес (кг):*</label>
-          <input class="block__item--input" type="text" id="cat-weight" name="cat-weight" placeholder="7" required>
-          <label class="block__item--label" for="cat-age">Возраст (лет):</label>
-          <input class="block__item--input" type="text" id="cat-age" name="cat-age" placeholder="7">
+          <label class="" for="cat-name">Имя:*</label>
+          <input class="form-block__input" type="text" id="cat-name" name="cat-name" placeholder="Барсик" required>
+          <label class="form-block__label" for="cat-weight">Вес (кг):*</label>
+          <input class="form-block__input" type="text" id="cat-weight" name="cat-weight" placeholder="7" required>
+          <label class="form-block__label" for="cat-age">Возраст (лет):</label>
+          <input class="form-block__input" type="text" id="cat-age" name="cat-age" placeholder="7">
         </section>
-        <section class="form__block form__block--border">
+        <section class="program-form__block form-block form-block--bordered">
           <h2 class="visually-hidden">Цели</h2>
-          <input class="block__item--radio" type="radio" id="slim" name="program" checked>
-          <label class="block__item--label" for="slim">Похудение</label>
-          <input class="block__item--radio" type="radio" id="gain" name="program">
-          <label class="block__item--label" for="gain">Набор массы</label>
-          <input class="block__item--radio" type="radio" id="unknown" name="program">
-          <label class="block__item--label" for="unknown">Не знаю (нужен ваш совет)</label>
+          <input class="form-block__radio" type="radio" id="slim" name="program" checked>
+          <label class="form-block__label" for="slim">Похудение</label>
+          <input class="form-block__radio" type="radio" id="gain" name="program">
+          <label class="form-block__label" for="gain">Набор массы</label>
+          <input class="form-block__radio" type="radio" id="unknown" name="program">
+          <label class="form-block__label" for="unknown">Не знаю (нужен ваш совет)</label>
         </section>
-        <section class="form__block">
-          <h2 class="block__title">Контактные данные(владельца кота)</h2>
-          <label class="block__item--label" for="email">E-mail:*</label>
-          <input class="block__item--input" type="email" id="email" name="email" placeholder="kuklachev@gmail.com" required>
-          <label class="block__item--label" for="phone">Телефон:</label>
-          <input class="block__item--input" type="tel" id="phone" name="phone" placeholder="8 (960) 900-60-90" required>
+        <section class="program-form__block form-block">
+          <h2 class="form-block__title">Контактные данные(владельца кота)</h2>
+          <label class="form-block__label" for="email">E-mail:*</label>
+          <input class="form-block__input" type="email" id="email" name="email" placeholder="kuklachev@gmail.com" required>
+          <label class="form-block__label" for="phone">Телефон:</label>
+          <input class="form-block__input" type="tel" id="phone" name="phone" placeholder="8 (960) 900-60-90" required>
         </section>
-        <section class="form__block">
-          <h2 class="block__title">Комментарий</h2>
+        <section class="program-form__block form-block">
+          <h2 class="form-block__title">Комментарий</h2>
           <label class="visually-hidden" for="comment"></label>
-          <textarea class="block__item--textarea" id="comment" name="comment" cols="28" rows="4" placeholder="Расскажите обо всех повадках кота"></textarea>
+          <textarea class="form-block__textarea" id="comment" name="comment" cols="28" rows="4" placeholder="Расскажите обо всех повадках кота"></textarea>
         </section>
-        <section class="form__block">
-          <h2 class="block__title">Дополнительно</h2>
-          <input class="block__item--checkbox" type="checkbox" id="sweetener" name="additional" checked>
-          <label class="block__item--label" for="sweetener">Сахарозаменитель</label>
-          <input class="block__item--checkbox" type="checkbox" id="water" name="additional">
-          <label class="block__item--label" for="water">Питьевая вода</label>
-          <input class="block__item--checkbox" type="checkbox" id="milk" name="additional">
-          <label class="block__item--label" for="milk">Молоко</label>
-          <input class="block__item--checkbox" type="checkbox" id="vitamins" name="additional">
-          <label class="block__item--label" for="vitamins">Витамины</label>
+        <section class="program-form__block form-block">
+          <h2 class="form-block__title">Дополнительно</h2>
+          <input class="form-block__checkbox" type="checkbox" id="sweetener" name="additional" checked>
+          <label class="form-block__label" for="sweetener">Сахарозаменитель</label>
+          <input class="form-block__checkbox" type="checkbox" id="water" name="additional">
+          <label class="form-block__label" for="water">Питьевая вода</label>
+          <input class="form-block__checkbox" type="checkbox" id="milk" name="additional">
+          <label class="form-block__label" for="milk">Молоко</label>
+          <input class="form-block__checkbox" type="checkbox" id="vitamins" name="additional">
+          <label class="form-block__label" for="vitamins">Витамины</label>
         </section>
         <button class="button button--submit" type="submit">Отправить заявку</button>
-        <p class="form__text">
+        <p class="program-form__text">
           * &#8212; Обязательные поля
         </p>
       </form>
@@ -84,16 +84,16 @@
         <section class="contacts">
           <h2 class="visually-hidden">Контакты</h2>
             <div class="contacts__text">
-                <p class="contacts__text--title">
+                <p class="contacts__promo">
                     Приглашаем к сотрудничеству дилеров!
                 </p>
-                <p class="contacts__text--address">
+                <p class="contacts__address">
                     ул. Большая Конюшенная, д.19/8<br>
                     <span class="contacts__city">Санкт-Петербург</span>
                 </p>
             </div>
             <div class="contacts__map">
-              <img class="map__iframe" src="http://placehold.it/320x365" alt="ул. Большая Конюшенная, д.19/8, Санкт-Петербург" width="320" height="365">
+              <img class="contacts__map-image" src="http://placehold.it/320x365" alt="ул. Большая Конюшенная, д.19/8, Санкт-Петербург" width="320" height="365">
             </div>
         </section>
         <a class="page-footer__item footer-logo"><img class="logo-header" src="http://placehold.it/101x18" alt="Cat Energy" width="101" height="18"></a>
@@ -101,13 +101,13 @@
           <h2 class="visually-hidden">Социальные сети</h2>
             <ul class="social__list">
                 <li class="social__item">
-                    <a class="social__item--vk">Вконтакте</a>
+                    <a class="social__link social__link--vk">Вконтакте</a>
                 </li>
                 <li class="social__item">
-                    <a class="social__item--insta">Instagram</a>
+                    <a class="social__link social__link--insta">Instagram</a>
                 </li>
                 <li class="social__item">
-                    <a class="social__item--fb">Facebook</a>
+                    <a class="social__link social__link--fb">Facebook</a>
                 </li>
             </ul>
         </section>

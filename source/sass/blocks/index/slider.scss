@@ -1,0 +1,42 @@
+.slider {
+  padding-top: 34px;
+}
+
+.slider__images {
+  margin-bottom: 31px;
+}
+
+.slider__image--after {
+  display: none;
+}
+
+.slider__controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: -5px;
+}
+
+.slider__button {
+  text-transform: uppercase;
+}
+
+.slider__scale {
+  display: inline-flex;
+  align-items: center;
+  box-sizing: border-box;
+  width: 84px;
+  height: 14px;
+  margin: 0 18px;
+  background-color: $white;
+  border: 1px solid $border-grey;
+  border-radius: 5px;
+}
+
+.slider__cursor {
+  margin-left: 5px;
+  width: 35px;
+  height: 6px;
+  border-radius: 3px;
+  background-color: $green;
+}

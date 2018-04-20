@@ -1,0 +1,34 @@
+// Global
+@import "global/normalize.scss";
+@import "global/variables.scss";
+@import "global/fonts.scss";
+@import "global/mixin.scss";
+@import "global/basic.scss";
+
+// Common
+@import "blocks/_common/page.scss";
+@import "blocks/_common/page-header.scss";
+@import "blocks/_common/page-nav.scss";
+@import "blocks/_common/button.scss";
+@import "blocks/_common/page-footer.scss";
+@import "blocks/_common/contacts.scss";
+@import "blocks/_common/social.scss";
+@import "blocks/_common/developers.scss";
+
+// Index
+@import "blocks/index/promo.scss";
+@import "blocks/index/program.scss";
+@import "blocks/index/features.scss";
+@import "blocks/index/example.scss";
+@import "blocks/index/achievement.scss";
+@import "blocks/index/slider.scss";
+
+// Catalog
+@import "blocks/catalog/catalog.scss";
+@import "blocks/catalog/item.scss";
+@import "blocks/catalog/more-item.scss";
+@import "blocks/catalog/additional.scss";
+
+// Form
+@import "blocks/form/program-form.scss";
+@import "blocks/form/form-block.scss";

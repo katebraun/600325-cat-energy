@@ -1,0 +1,82 @@
+.additional__title {
+  padding: 0 19px;
+  margin-top: 32px;
+  margin-bottom: 36px;
+}
+
+.additional__item {
+  width: 100%;
+  border-top: 1px solid $radio-border-grey;
+  padding-bottom: 17px;
+}
+
+.additional__item:last-child {
+  border-bottom: 1px solid $radio-border-grey;
+}
+
+.additional__list {
+  @include reset-list;
+}
+
+.additional__name {
+  padding-top: 13px;
+  margin-top: 0;
+  margin-bottom: 13px;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+
+.additional__details {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 0;
+  border-collapse: collapse;
+  font-family: $arial;
+  font-size: 14px;
+  line-height: 14px;
+  color: $font-grey;
+}
+
+.additional__detail {
+  padding: 0;
+}
+
+.additional__detail--value {
+  text-align: right;
+}
+
+.additional__promo {
+  margin-top: 39px;
+  margin-bottom: 35px;
+  font-family: $arial;
+  font-size: 16px;
+  line-height: 20px;
+  color: $white;
+  background-image: url("../img/gift-photo-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: $green;
+}
+
+.additional__text {
+  position: relative;
+  text-align: center;
+  padding-top: 187px;
+  padding-bottom: 43px;
+  padding-left: 55px;
+  padding-right: 55px;
+  margin: 0;
+}
+
+.additional__text::after {
+  content: "";
+  position: absolute;
+  top: 65px;
+  left: 113px;
+  width: 55px;
+  height: 60px;
+  background-image: url("../img/icon-gift.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}

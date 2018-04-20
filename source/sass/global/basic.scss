@@ -1,0 +1,19 @@
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  min-width: $mobile-width;
+  margin: 0 auto;
+  padding: 0 $mobile-paddings;
+  box-sizing: border-box;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}

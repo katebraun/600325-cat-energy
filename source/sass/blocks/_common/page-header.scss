@@ -1,0 +1,26 @@
+.page-header {
+  position: relative;
+  background-color: $white;
+}
+
+.page-header__logo {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 45px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.page-header__logo-header {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.page-header__logo-image {
+  margin-top: -5px;
+}

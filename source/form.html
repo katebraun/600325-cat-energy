@@ -20,7 +20,7 @@
                 <a class="page-nav__link" href="index.html">Главная</a>
               </li>
               <li class="page-nav__item">
-                <a class="page-nav_link" href="catalog.html">Каталог продукции</a>
+                <a class="page-nav__link" href="catalog.html">Каталог продукции</a>
               </li>
               <li class="page-nav__item">
                 <a class="page-nav__link page-nav__link---active">Подбор программы</a>
@@ -39,74 +39,116 @@
       </div>
       <form class="program-form" action="https://echo.htmlacademy.ru" method="post">
         <div class="container">
-          <section class="program-form__block form-block">
-            <h2 class="visually-hidden">Личные данные кота</h2>
-            <label class="form-block__label" for="cat-name">Имя:*
-              <input class="form-block__input" type="text" id="cat-name" name="cat-name" placeholder="Барсик" required>
-            </label>
-            <label class="form-block__label" for="cat-weight">Вес (кг):*
-              <input class="form-block__input" type="text" id="cat-weight" name="cat-weight" placeholder="7" required>
-            </label>
-            <label class="form-block__label" for="cat-age">Возраст (лет):
-              <input class="form-block__input" type="text" id="cat-age" name="cat-age" placeholder="7">
-            </label>
+
+          <section class="form-block form-block--no-border">
+            <h2 class="visually-hidden">Введите личные данные кота</h2>
+            <p class="form-block__unit">
+              <label class="form-block__item">
+                <span class="form-block__label">Имя:*</span>
+                <input class="form-block__input" type="text" name="name" placeholder="Барсик" required>
+              </label>
+            </p>
+            <p class="form-block__unit">
+              <label class="form-block__item">
+                <span class="form-block__label">Вес (кг):*</span>
+                <input class="form-block__input" type="text" name="weight" placeholder="7" required>
+              </label>
+            </p>
+            <p class="form-block__unit">
+              <label class="form-block__item">
+                <span class="form-block__label">Возраст (лет):</span>
+                <input class="form-block__input" type="text" name="age" placeholder="7">
+              </label>
+            </p>
           </section>
-          <section class="program-form__block form-block form-block--bordered">
-            <h2 class="visually-hidden">Цели</h2>
-            <label class="form-block__label" for="slim">
-              <input class="form-block__radio" type="radio" id="slim" name="program" checked>
-              Похудение
-            </label>
-            <label class="form-block__label" for="gain">
-              <input class="form-block__radio" type="radio" id="gain" name="program">
-              Набор массы
-            </label>
-            <label class="form-block__label" for="unknown">
-              <input class="form-block__radio" type="radio" id="unknown" name="program">
-              Не знаю (нужен ваш совет)
-            </label>
+
+          <section class="form-block form-block--bordered">
+            <h2 class="visually-hidden">Выберите программу</h2>
+            <ul class="form-block__list">
+              <li class="form-block__list-item">
+                <label class="form-block__item">
+                  <input class="visually-hidden form-block__radio" type="radio" name="program" value="Похудение" checked>
+                  <span class="form-block__label form-block__label--radio">Похудение</span>
+                </label>
+              </li>
+              <li class="form-block__list-item">
+                <label class="form-block__item">
+                  <input class="visually-hidden form-block__radio" type="radio" name="program" value="Набор массы">
+                  <span class="form-block__label form-block__label--radio">Набор массы</span>
+                </label>
+              </li>
+              <li class="form-block__list-item">
+                <label class="form-block__item">
+                  <input class="visually-hidden form-block__radio" type="radio" name="program" value="Не знаю (Нужен ваш совет)">
+                  <span class="form-block__label form-block__label--radio">Не знаю (Нужен ваш совет)</span>
+                </label>
+              </li>
+            </ul>
           </section>
         </div>
+
         <section class="program-form__block form-block">
-          <h2 class="form-block__title">Контактные данные(владельца кота)</h2>
+          <h2 class="form-block__title">Контактные данные (владельца кота)</h2>
           <div class="container">
-            <label class="form-block__label" for="email">E-mail:*
-              <input class="form-block__input" type="email" id="email" name="email" placeholder="kuklachev@gmail.com" required>
-            </label>
-            <label class="form-block__label" for="phone">Телефон:
-              <input class="form-block__input" type="tel" id="phone" name="phone" placeholder="8 (960) 900-60-90" required>
-            </label>
+            <p class="form-block__unit">
+              <label class="form-block__item">
+                <span class="form-block__label">E-mail:*</span>
+                <input class="form-block__input" type="email" name="e-mail" placeholder="kuklachev@gmail.com" required>
+              </label>
+            </p>
+            <p class="form-block__unit">
+              <label class="form-block__item">
+                <span class="form-block__label">Телефон:*</span>
+                <input class="form-block__input" type="tel" name="phone" placeholder="8 (960) 900-60-90" required>
+              </label>
+            </p>
           </div>
         </section>
+
         <section class="program-form__block form-block">
-          <h2 class="form-block__title">Комментарий</h2>
+          <h2 class="form-block__title"><span>Комментарий</span></h2>
           <div class="container">
-            <label class="visually-hidden" for="comment"></label>
-            <textarea class="form-block__textarea" id="comment" name="comment" cols="28" rows="4" placeholder="Расскажите обо всех повадках кота"></textarea>
+            <p class="form-block__unit form-block__unit--textarea">
+              <label class="form-block__item">
+                <textarea class="form-block__input form-block__input--textarea" name="comment" cols="28" rows="4" placeholder="Расскажите обо всех повадках кота"></textarea>
+              </label>
+            </p>
           </div>
         </section>
+
         <section class="program-form__block form-block">
           <h2 class="form-block__title">Дополнительно</h2>
-          <div class="container form-block">
-            <label class="form-block__label" for="sweetener">
-              <input class="form-block__checkbox" type="checkbox" id="sweetener" name="additional" checked>
-              Сахарозаменитель
-            </label>
-            <label class="form-block__label" for="water">
-              <input class="form-block__checkbox" type="checkbox" id="water" name="additional">
-              Питьевая вода
-            </label>
-            <label class="form-block__label" for="milk">
-              <input class="form-block__checkbox" type="checkbox" id="milk" name="additional">
-              Молоко
-            </label>
-            <label class="form-block__label" for="vitamins">
-              <input class="form-block__checkbox" type="checkbox" id="vitamins" name="additional">
-              Витамины
-            </label>
+          <div class="container">
+            <ul class="form-block__list form-block__list--checkbox">
+              <li class="form-block__list-item">
+                <label class="form-block__item">
+                  <input class="form-block__checkbox visually-hidden" type="checkbox" name="sweetener" checked>
+                  <span class="form-block__label form-block__label--checkbox">Сахарозаменитель</span>
+                </label>
+              </li>
+              <li class="form-block__list-item">
+                <label class="form-block__item">
+                  <input class="form-block__checkbox visually-hidden" type="checkbox" name="water">
+                  <span class="form-block__label form-block__label--checkbox">Питьевая вода</span>
+                </label>
+              </li>
+              <li class="form-block__list-item">
+                <label class="form-block__item">
+                  <input class="form-block__checkbox visually-hidden" type="checkbox" name="milk">
+                  <span class="form-block__label form-block__label--checkbox">Молоко</span>
+                </label>
+              </li>
+              <li class="form-block__list-item">
+                <label class="form-block__item">
+                  <input  class="form-block__checkbox visually-hidden" type="checkbox" name="vitamins">
+                  <span class="form-block__label form-block__label--checkbox">Витамины</span>
+                </label>
+              </li>
+            </ul>
           </div>
         </section>
-        <div class="container">
+
+        <div class="container form-block__submit">
           <button class="button button--submit" type="submit">Отправить заявку</button>
           <p class="program-form__text">
             * &#8212; Обязательные поля
@@ -118,7 +160,7 @@
     <footer class="page-footer">
         <section class="contacts">
           <h2 class="visually-hidden">Контакты</h2>
-            <div class="contacts__text">
+            <div class="contacts__text contacts__text--grey">
                 <p class="contacts__promo">
                     Приглашаем к&nbsp;сотрудничеству дилеров!
                 </p>

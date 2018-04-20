@@ -76,7 +76,7 @@
   border-radius: 50%;
 }
 
-.form-block__radio:checked+.form-block__label--radio::after {
+.form-block__radio:checked + .form-block__label--radio::after {
   position: absolute;
   content: "";
   top: 9px;
@@ -104,7 +104,7 @@
   margin: 12px 0;
 }
 
-.form-block__checkbox:checked+.form-block__label--checkbox::after {
+.form-block__checkbox:checked + .form-block__label--checkbox::after {
   position: absolute;
   content: "";
   top: 7px;

@@ -1,0 +1,23 @@
+.developers {
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.developers__link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+}
+
+.developers__text {
+  font-family: $arial;
+  font-size: 16px;
+  line-height: 16px;
+  color: $font-grey;
+}
+
+.developers__logo {
+  margin-top: 2px;
+}

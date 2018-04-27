@@ -1,23 +1,36 @@
 .developers {
-  width: 100%;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  @include tablet {
+    padding-top: 20px;
+  }
+
+  @include desktop {
+    padding-top: 0;
+  }
 }
 
 .developers__link {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  text-decoration: none;
-}
-
-.developers__text {
   font-family: $arial;
-  font-size: 16px;
-  line-height: 16px;
+  text-decoration: none;
   color: $font-grey;
+
+  &:hover .developers__logo {
+    fill: $green;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .developers__logo {
-  margin-top: 2px;
+  width: 27px;
+  height: 34px;
+  fill: #666666;
+
+  @include tablet {
+    margin-left: 22px;
+  }
 }

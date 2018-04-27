@@ -1,39 +1,118 @@
 .promo {
-  background-color: $green;
-  background-image:
-    url("../img/index-background-mobile@1x.jpg"),
-    linear-gradient(to top, $white 190px, $green 190px);
   background-repeat: no-repeat;
   background-position: top;
+  background-image:
+    linear-gradient(to top, #ffffff 97px, transparent 97px),
+    url("../img/index-background-mobile@1x.jpg"),
+    linear-gradient(to top, #ffffff 197px, #61a63c 197px);
+  background-color: #61a63c;
   background-size: 100%;
-  color: $white;
+
+  @include tablet {
+    background: #ffffff;
+  }
+
+  @include desktop {
+    min-height: 560px;
+    background: transparent;
+  }
 }
 
 .promo__wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  position: relative;
+  padding-bottom: 22px;
+  text-align: center;
+  color: #ffffff;
+  z-index: 0;
+
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 20px;
+    text-align: left;
+    color: $black;
+  }
 }
 
 .promo__title {
-  margin: 0 auto;
-  padding-top: 27px;
-  margin-bottom: 25px;
-  text-align: center;
-  font-size: 36px;
-  line-height: 36px;
-  color: $white;
+  @include desktop {
+    margin-top: 34px;
+  }
 }
 
 .promo__text {
-  margin-top: 0;
+  margin-top: 5px;
   margin-bottom: 28px;
   font-size: 14px;
-  line-height: 14px;
   text-transform: uppercase;
+
+  @include tablet {
+    font-size: 20px;
+    line-height: 22px;
+    padding-bottom: 15px;
+  }
+
+  @include desktop {
+    padding-bottom: 25px;
+  }
 }
 
-.promo__button {
-  margin-top: 3px;
-  padding: 11px 73px;
+.promo__image-wrapper {
+  @include tablet {
+    display: flex;
+    justify-content: center;
+    order: 2;
+    width: 100%;
+  }
+}
+
+.promo__content {
+  @include tablet {
+    margin-left: 100px;
+  }
+}
+
+.promo__image {
+  margin: 0 auto;
+  margin-bottom: 2px;
+  height: auto;
+  animation-name: fadeInLeft;
+  animation-duration: 1.5s;
+
+  @include tablet {
+    margin-top: -80px;
+    z-index: -1;
+    width: 709px;
+    height: 609px;
+  }
+
+  @include desktop {
+    position: absolute;
+    top: 0;
+    left: 490px;
+    margin-top: 5px;
+    margin-bottom: 50px;
+    width: 552px;
+    height: 499px;
+  }
+}
+
+.promo__btn {
+  font-size: 14px;
+  color: #ffffff;
+
+  @include tablet {
+    display: inline-block;
+    width: auto;
+    margin-bottom: 500px;
+    padding: 16px 27px;
+    font-size: 20px;
+    margin-top: -500px;
+  }
+
+  @include desktop {
+    margin-top: 0;
+    margin-bottom: 3px;
+  }
 }

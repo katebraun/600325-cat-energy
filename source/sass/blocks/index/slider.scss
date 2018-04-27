@@ -1,42 +1,205 @@
 .slider {
-  padding-top: 34px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 34px;
+
+  @include tablet {
+    margin: 0 -30px;
+    background-image: linear-gradient(#ffffff 0, #ffffff 180px, $grey 180px, $grey 100%);
+    overflow: hidden;
+  }
+
+  @include desktop {
+    padding-bottom: 35px;
+    margin: 0;
+    background-image: linear-gradient(#ffffff 0, #ffffff 200px, $grey 200px, $grey 100%);
+    overflow: visible;
+  }
 }
 
 .slider__images {
-  margin-bottom: 31px;
+  position: relative;
+  margin: 0 -20px;
+  width: 320px;
+  height: 240px;
+
+  @include tablet {
+    margin: 10px 0 0;
+    width: 680px;
+    height: 517px;
+  }
+
+  @include desktop {
+    width: 650px;
+  }
 }
 
-.slider__image--after {
-  display: none;
+.slider__image {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  overflow: hidden;
+  transition: width 0.5s ease-out;
+
+  &--after {
+    display: flex;
+    justify-content: flex-end;
+    width: 0;
+    right: 0;
+  }
+
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+
+    &--after {
+      align-items: flex-end;
+      box-shadow: 400px 570px 0 400px #eaeaea;
+      background-image: linear-gradient(#ffffff 0, #ffffff 170px, #eaeaea 170px, #eaeaea 100%);
+
+      img {
+        z-index: 1;
+      }
+    }
+  }
+
+  @include desktop {
+    &--before {
+      width: 750px;
+      left: -40px;
+      padding-right: 40px;
+    }
+
+    &--after {
+      box-shadow: 400px 590px 0 400px #eaeaea;
+      background-image: linear-gradient(#ffffff 0, #ffffff 190px, #eaeaea 190px, #eaeaea 100%);
+    }
+  }
+
+  img {
+    max-width: inherit;
+
+    @include tablet {
+      width: 680px;
+      height: 517px;
+    }
+
+    @include desktop {
+      width: 690px;
+    }
+  }
 }
 
-.slider__controls {
+.slider__before:checked ~ .slider__images .slider__image--before,
+.slider__after:checked ~ .slider__images .slider__image--after {
+  width: 100%;
+}
+
+.slider__before:checked ~ .slider__images .slider__image--after,
+.slider__after:checked ~ .slider__images .slider__image--before {
+  width: 0;
+}
+
+.slider__actions {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: -5px;
+  margin-top: 30px;
+  padding: 2px;
+  z-index: 1;
+
+  @include tablet {
+    margin-top: 15px;
+    margin-bottom: 30px;
+  }
+
+  @include desktop {
+    margin-top: 33px;
+  }
 }
 
-.slider__button {
+.slider__btn {
+  margin: 0 20px;
+  line-height: 1.25;
+  text-align: center;
   text-transform: uppercase;
+  color: $black;
+  cursor: pointer;
+
+  @include tablet {
+    padding: 6px 0;
+    font-size: 20px;
+    line-height: 1;
+    border-bottom: 1px dotted rgba(0, 0, 0, 0.3);
+
+    &:hover {
+      border-bottom-style: solid;
+    }
+
+    &:active {
+      border-bottom: 0;
+    }
+  }
 }
 
 .slider__scale {
   display: inline-flex;
   align-items: center;
-  box-sizing: border-box;
-  width: 84px;
+  padding: 4px 6px;
+  width: 85px;
   height: 14px;
-  margin: 0 18px;
-  background-color: $white;
+  border-radius: 6px;
+  background-color: #ffffff;
   border: 1px solid $border-grey;
-  border-radius: 5px;
+  box-sizing: border-box;
+
+  @include tablet {
+    padding: 4px 0;
+    width: 428px;
+    height: 6px;
+    background-color: $border-grey;
+    border-color: $border-grey;
+  }
 }
 
-.slider__cursor {
-  margin-left: 5px;
+.slider__grip {
+  flex-shrink: 0;
+  display: block;
   width: 35px;
   height: 6px;
   border-radius: 3px;
   background-color: $green;
+  cursor: pointer;
+  transition: margin-left 0.35s ease-out;
+
+  @include tablet {
+    margin-left: calc(50% - 17px);
+    width: 34px;
+    height: 34px;
+    background-image: radial-gradient($green 0, $green 4px, #ffffff 5px, #ffffff 100%);
+    border: 1px solid $border-grey;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    box-sizing: border-box;
+
+    &:hover {
+      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.25);
+    }
+
+    &:active {
+      border: 2px solid $green;
+      box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3);
+    }
+  }
+}
+
+.slider__before:checked ~ .slider__actions .slider__grip {
+  margin-left: 0;
+}
+
+.slider__after:checked ~ .slider__actions .slider__grip {
+  margin-left: calc(100% - 34px);
 }

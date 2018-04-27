@@ -8,8 +8,9 @@
 // Common
 @import "blocks/_common/page.scss";
 @import "blocks/_common/page-header.scss";
+@import "blocks/_common/page-logo.scss";
+@import "blocks/_common/menu-toggle.scss";
 @import "blocks/_common/page-nav.scss";
-@import "blocks/_common/button.scss";
 @import "blocks/_common/page-footer.scss";
 @import "blocks/_common/contacts.scss";
 @import "blocks/_common/social.scss";
@@ -25,8 +26,8 @@
 
 // Catalog
 @import "blocks/catalog/catalog.scss";
-@import "blocks/catalog/item.scss";
-@import "blocks/catalog/more-item.scss";
+@import "blocks/catalog/product.scss";
+@import "blocks/catalog/more-products.scss";
 @import "blocks/catalog/additional.scss";
 
 // Form

@@ -1,48 +1,93 @@
 .page-nav {
   margin: 0 -20px;
   border-top: 1px solid $header-border-grey;
+
+  @include tablet {
+    border-top: none;
+    margin: 0 -18px;
+  }
 }
 
 .page-nav__toggle {
   position: absolute;
   top: 0;
   right: 0;
-  width: 0;
-  height: 0;
-  margin: 0;
-  padding: 32px;
-  font-size: 0;
-  cursor: pointer;
-  border: none;
-  background-color: transparent;
-}
 
-.page-nav__toggle::after {
-  content: url("../img/icon-mobile-menu.svg");
-  position: absolute;
-  top: calc(50% - 9px);
-  left: calc(50% - 12px);
-  width: 24px;
-  height: 24px;
+  @include tablet {
+    display: none;
+  }
 }
 
 .page-nav__list {
+  display: block;
+
   @include reset-list;
+
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @include desktop {
+    width: 570px;
+    justify-content: flex-end;
+  }
 }
 
 .page-nav__item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 22px;
-  padding-bottom: 22px;
-  font-size: 20px;
-  line-height: 20px;
-  text-transform: uppercase;
   border-bottom: 1px solid $header-border-grey;
+
+  @include tablet {
+    border-bottom: none;
+  }
 }
 
 .page-nav__link {
-  color: $black;
+  display: block;
+  padding: 20px;
+  font-family: $oswald;
+  font-size: 20px;
+  line-height: 25px;
+  text-align: center;
   text-decoration: none;
+  text-transform: uppercase;
+  color: $black;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &--active {
+    pointer-events: none;
+  }
+
+  @include tablet {
+    margin: 0 18px;
+    padding: 10px 0;
+    font-size: 18px;
+    line-height: 1.38;
+
+    &--active {
+      border-bottom: 2px solid $green;
+    }
+  }
+
+  @include desktop {
+    font-size: 20px;
+    line-height: 1.24;
+  }
+}
+
+@include desktop {
+  .page-nav__list--index .page-nav__link {
+    color: #ffffff;
+
+    &--active {
+      border-bottom-color: #ffffff;
+    }
+  }
 }

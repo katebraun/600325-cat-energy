@@ -6,80 +6,78 @@
     <title>HTML Academy: Кэт энерджи</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
+
   <body class="page">
+
     <header class="page-header">
-      <div class="container">
-        <a class="page-header__logo" href="index.html">
-          <img class="page-header__logo-image" src="img/logo-image-mobile.svg" alt="Cat Energy" width="33" height="38">
-          <img class="page-header__logo-header" src="img/logo-header-mobile.svg" alt="Cat Energy" width="101" height="18">
+      <div class="page-header__wrapper container">
+        <a class="page-logo" href="index.html" >
+          <img class="page-logo__image" src="img/logo-image-mobile.svg" alt="Cat Energy" width="33" height="38">
+          <img class="page-logo__title page-logo__title--header" src="img/logo-header-mobile.svg" alt="Cat Energy" width="101" height="18">
         </a>
-        <nav class="page-nav">
-          <button class="page-nav__toggle" type="button">Показать меню</button>
-            <ul class="page-nav__list">
-              <li class="page-nav__item">
-                <a class="page-nav__link" href="index.html">Главная</a>
-              </li>
-              <li class="page-nav__item">
-                <a class="page-nav__link" href="catalog.html">Каталог продукции</a>
-              </li>
-              <li class="page-nav__item">
-                <a class="page-nav__link page-nav__link---active">Подбор программы</a>
-              </li>
-            </ul>
+        <nav class="page-nav page-nav--opened">
+          <button class="page-nav__toggle menu-toggle" type="button">Показать меню</button>
+          <ul class="page-nav__list">
+            <li class="page-nav__item"><a class="page-nav__link" href="index.html">Главная</a></li>
+            <li class="page-nav__item"><a class="page-nav__link" href="catalog.html">Каталог продукции</a></li>
+            <li class="page-nav__item"><a class="page-nav__link page-nav__link--active">Подбор программы</a></li>
+          </ul>
         </nav>
       </div>
     </header>
 
-    <main class="page-main">
-      <div class="container">
-        <h1 class="page__title page__title--form">Подбор программы</h1>
-        <p class="page__text page__text--form">
-          Заполните анкету и  мы подберем программу питания для вашего кота
-        </p>
-      </div>
-      <form class="program-form" action="https://echo.htmlacademy.ru" method="post">
-        <div class="container">
+    <main>
+      <h1 class="visually-hidden">Cat Energy</h1>
 
-          <section class="form-block form-block--no-border">
-            <h2 class="visually-hidden">Введите личные данные кота</h2>
-            <p class="form-block__unit">
-              <label class="form-block__item">
+      <form class="program-form" action="http://echo.htmlacademy.ru" method="post">
+        <div class="container">
+          <h2 class="page__title page__title--top">Подбор программы</h2>
+          <p class="program-form__text">
+            Заполните анкету и мы подберем <br> программу питания для вашего кота
+          </p>
+        </div>
+
+        <div class="program-form__wrapper container">
+          <section class="form-block form-block--no-title">
+            <h3 class="visually-hidden">Введите личные данные кота</h3>
+            <p class="form-block__row">
+              <label class="form-block__item page__block-title">
                 <span class="form-block__label">Имя:*</span>
-                <input class="form-block__input" type="text" name="name" placeholder="Барсик" required>
+                <input type="text" class="form-block__input" name="Имя" placeholder="Барсик" required>
               </label>
             </p>
-            <p class="form-block__unit">
-              <label class="form-block__item">
+            <p class="form-block__row">
+              <label class="form-block__item page__block-title">
                 <span class="form-block__label">Вес (кг):*</span>
-                <input class="form-block__input" type="text" name="weight" placeholder="7" required>
+                <input type="text" class="form-block__input" name="Вес" placeholder="7" required>
               </label>
             </p>
-            <p class="form-block__unit">
-              <label class="form-block__item">
+            <p class="form-block__row">
+              <label class="form-block__item page__block-title">
                 <span class="form-block__label">Возраст (лет):</span>
-                <input class="form-block__input" type="text" name="age" placeholder="7">
+                <input type="text" class="form-block__input" name="Возраст" placeholder="7">
               </label>
             </p>
           </section>
 
           <section class="form-block form-block--bordered">
-            <h2 class="visually-hidden">Выберите программу</h2>
+            <h3 class="visually-hidden">Выберите программу</h3>
             <ul class="form-block__list">
               <li class="form-block__list-item">
-                <label class="form-block__item">
-                  <input class="visually-hidden form-block__radio" type="radio" name="program" value="Похудение" checked>
+                <label class="form-block__item page__block-title">
+                  <input type="radio" name="Программа" value="Похудение" class="form-block__radio visually-hidden" checked>
                   <span class="form-block__label form-block__label--radio">Похудение</span>
                 </label>
               </li>
               <li class="form-block__list-item">
-                <label class="form-block__item">
-                  <input class="visually-hidden form-block__radio" type="radio" name="program" value="Набор массы">
+                <label class="form-block__item page__block-title">
+                  <input type="radio" name="Программа" value="Набор массы" class="form-block__radio visually-hidden">
                   <span class="form-block__label form-block__label--radio">Набор массы</span>
                 </label>
               </li>
               <li class="form-block__list-item">
-                <label class="form-block__item">
-                  <input class="visually-hidden form-block__radio" type="radio" name="program" value="Не знаю (Нужен ваш совет)">
+                <label class="form-block__item page__block-title">
+                  <input type="radio" name="Программа" value="Не знаю (Нужен ваш совет)" class="form-block__radio visually-hidden">
                   <span class="form-block__label form-block__label--radio">Не знаю (Нужен ваш совет)</span>
                 </label>
               </li>
@@ -87,60 +85,75 @@
           </section>
         </div>
 
-        <section class="program-form__block form-block">
-          <h2 class="form-block__title">Контактные данные (владельца кота)</h2>
-          <div class="container">
-            <p class="form-block__unit">
-              <label class="form-block__item">
+        <section class="form-block">
+          <h3 class="form-block__title page__subtitle"><span>Контактные данные <br> (владельца кота)</span></h3>
+          <div class="program-form__wrapper container">
+            <p class="form-block__row">
+              <label class="form-block__item page__block-title">
                 <span class="form-block__label">E-mail:*</span>
-                <input class="form-block__input" type="email" name="e-mail" placeholder="kuklachev@gmail.com" required>
+                <span class="form-block__input-wrapper">
+                  <input type="email" class="form-block__input" name="E-mail" placeholder="kuklachev@gmail.com" required>
+                  <svg class="form-block__icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 17 13" style="enable-background:new 0 0 17 13;" xml:space="preserve">
+                    <path d="M15.6,11.6H1.4V5.8H0V13h17V5.8h-1.4V11.6z M0,0v2.3l8.5,7.1L17,2.3V0H0z M15.6,1.6L8.5,7.5L1.4,1.6V1.4h14.2L15.6,1.6z"/>
+                  </svg>
+                </span>
               </label>
             </p>
-            <p class="form-block__unit">
-              <label class="form-block__item">
+            <p class="form-block__row">
+              <label class="form-block__item page__block-title">
                 <span class="form-block__label">Телефон:*</span>
-                <input class="form-block__input" type="tel" name="phone" placeholder="8 (960) 900-60-90" required>
+                <span class="form-block__input-wrapper">
+                  <input type="tel" class="form-block__input" name="Телефон" placeholder="8 (960) 900-60-90" required>
+                  <svg class="form-block__icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 20 20" style="enable-background:new 0 0 20 20;" xml:space="preserve">
+                    <path d="M17.9,9.4H9.4v1.2h8.5l-2.1,2.1l0.9,0.9l3.1-3.1c0.2-0.2,0.2-0.6,0-0.9l-3.1-3.1l-0.9,0.9L17.9,9.4z"/>
+                    <path
+                      d="M8.1,19.4v-6.2c0-0.3-0.3-0.6-0.6-0.6H4.4l0,0H3.1l0,0c0,0.7,0.6,1.2,1.2,1.2h2.5v5H3.1c-1,0.1-1.8-0.7-1.9-1.7
+                    c0-0.1,0-0.1,0-0.2V3.1c0-1,0.8-1.8,1.7-1.8c0.1,0,0.1,0,0.2,0h3.7v5H4.4c-0.7,0-1.2,0.6-1.2,1.2h4.4c0.3,0,0.6-0.3,0.6-0.6V0.6
+                    C8.1,0.3,7.8,0,7.5,0H3.1C1.5-0.1,0.1,1.2,0,2.9C0,3,0,3.1,0,3.1v13.7c-0.1,1.7,1.2,3.1,2.9,3.1c0.1,0,0.2,0,0.2,0h4.4
+                    C7.8,20,8.1,19.7,8.1,19.4z"/>
+                  </svg>
+                </span>
               </label>
             </p>
           </div>
         </section>
 
-        <section class="program-form__block form-block">
-          <h2 class="form-block__title"><span>Комментарий</span></h2>
+        <section class="form-block">
+          <h3 class="form-block__title page__subtitle"><span>Комментарий</span></h3>
           <div class="container">
-            <p class="form-block__unit form-block__unit--textarea">
-              <label class="form-block__item">
-                <textarea class="form-block__input form-block__input--textarea" name="comment" cols="28" rows="4" placeholder="Расскажите обо всех повадках кота"></textarea>
+            <p class="form-block__row form-block__row--textarea">
+              <label class="form-block__item page__block-title">
+                <textarea class="form-block__input form-block__input--textarea" name="Комментарий" cols="28" rows="4" placeholder="Расскажите обо всех повадках кота"></textarea>
               </label>
             </p>
           </div>
         </section>
 
-        <section class="program-form__block form-block">
-          <h2 class="form-block__title">Дополнительно</h2>
+        <section class="form-block">
+          <h3 class="form-block__title form-block__title--last page__subtitle"><span>Дополнительно</span></h3>
           <div class="container">
             <ul class="form-block__list form-block__list--checkbox">
               <li class="form-block__list-item">
-                <label class="form-block__item">
-                  <input class="form-block__checkbox visually-hidden" type="checkbox" name="sweetener" checked>
+                <label class="form-block__item page__block-title">
+                  <input type="checkbox" name="sweetener" class="form-block__checkbox visually-hidden" checked>
                   <span class="form-block__label form-block__label--checkbox">Сахарозаменитель</span>
                 </label>
               </li>
               <li class="form-block__list-item">
-                <label class="form-block__item">
-                  <input class="form-block__checkbox visually-hidden" type="checkbox" name="water">
+                <label class="form-block__item page__block-title">
+                  <input type="checkbox" name="water" class="form-block__checkbox visually-hidden">
                   <span class="form-block__label form-block__label--checkbox">Питьевая вода</span>
                 </label>
               </li>
               <li class="form-block__list-item">
-                <label class="form-block__item">
-                  <input class="form-block__checkbox visually-hidden" type="checkbox" name="milk">
+                <label class="form-block__item page__block-title">
+                  <input type="checkbox" name="milk" class="form-block__checkbox visually-hidden">
                   <span class="form-block__label form-block__label--checkbox">Молоко</span>
                 </label>
               </li>
               <li class="form-block__list-item">
-                <label class="form-block__item">
-                  <input  class="form-block__checkbox visually-hidden" type="checkbox" name="vitamins">
+                <label class="form-block__item page__block-title">
+                  <input type="checkbox" name="vitamins" class="form-block__checkbox visually-hidden">
                   <span class="form-block__label form-block__label--checkbox">Витамины</span>
                 </label>
               </li>
@@ -148,55 +161,105 @@
           </div>
         </section>
 
-        <div class="container form-block__submit">
-          <button class="button button--submit" type="submit">Отправить заявку</button>
-          <p class="program-form__text">
-            * &#8212; Обязательные поля
-          </p>
-        </div>
+        <footer class="program-form__footer container">
+          <button class="program-form__submit-btn page__btn">Отправить заявку</button>
+          <p class="program-form__note page__text"><sup>*</sup> — Обязательные поля</p>
+        </footer>
       </form>
     </main>
 
     <footer class="page-footer">
-        <section class="contacts">
-          <h2 class="visually-hidden">Контакты</h2>
-            <div class="contacts__text contacts__text--grey">
-                <p class="contacts__promo">
-                    Приглашаем к&nbsp;сотрудничеству дилеров!
-                </p>
-                <p class="contacts__address">
-                    ул. Большая Конюшенная, д. 19/8<br>
-                    <span class="contacts__city">Санкт-Петербург</span>
-                </p>
-            </div>
-            <div class="contacts__map">
-              <img class="contacts__map-image" src="img/bg-map-mobile@1x.png" alt="ул. Большая Конюшенная, д.19/8, Санкт-Петербург" width="320" height="362">
-            </div>
-        </section>
-        <div class="container page-footer__wrapper">
-          <a class="page-footer__item" href="index.html"><img class="page-footer__logo" src="img/logo-footer.svg" alt="Cat Energy" width="128" height="24"></a>
-          <section class="page-footer__item social">
-            <h2 class="visually-hidden">Социальные сети</h2>
-              <ul class="social__list">
-                  <li class="social__item">
-                      <a class="social__link social__link--vk" href="http://vk.com/">Вконтакте</a>
-                  </li>
-                  <li class="social__item">
-                      <a class="social__link social__link--insta" href="http://instagram.com/">Instagram</a>
-                  </li>
-                  <li class="social__item">
-                      <a class="social__link social__link--fb" href="http://facebook.com/">Facebook</a>
-                  </li>
-              </ul>
-          </section>
-          <section class="page-footer__item developers">
-            <h2 class="visually-hidden">Разработчики</h2>
-            <a class="developers__link" href="https://htmlacademy.ru/intensive/adaptive">
-                <span class="developers__text">HTML Academy</span>
-                <img class="developers__logo" src="img/htmlacademy.svg" alt="HTML Academy" width="27" height="38">
-            </a>
-          </section>
+      <div class="contacts">
+        <div class="contacts__text-wrapper">
+          <div class="contacts__text contacts__text--white">
+            <p class="contacts__half contacts__promo page__block-title">
+              Приглашаем к&nbsp;сотрудничеству дилеров!
+            </p>
+            <p class="contacts__half contacts__address page__text">
+              ул. Большая Конюшенная, д. 19/8
+              <span class="contacts__city">Санкт-Петербург</span>
+            </p>
+          </div>
         </div>
+        <div class="contacts__map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651586!2d30.320894616097!3d59.938794181876254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1524667393007" width="100%" style="border:0" allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <div class="page-footer__bottom container">
+        <div class="page-footer__item page-logo page-logo--footer">
+          <a class="page-logo__title" href="index.html">
+            <img src="img/logo-header-mobile.svg" alt="Cat Energy" width="101" height="18">
+          </a>
+        </div>
+        <section class="page-footer__item social">
+          <h2 class="visually-hidden">Мы в социальных сетях</h2>
+          <ul class="social__list">
+            <li class="social__item">
+              <a class="social__link social__link--vk" href="https://vk.com/htmlacademy">Вконтакте
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 22 12" style="enable-background:new 0 0 22 12;" xml:space="preserve">
+                  <g>
+                    <path
+                      d="M17.6,12c-0.3,0-0.9-0.1-1.5-0.5c-0.5-0.3-0.9-0.7-1.3-1.2c-0.3-0.3-0.9-0.9-1.1-0.9c-0.2,0.1-0.4,0.7-0.3,1.2
+                    c0,0.1,0,0.6-0.3,0.9c-0.3,0.3-0.8,0.4-0.9,0.4l-1.4,0c-0.7,0-3.2-0.2-5.4-2.3C2.5,7.1,0.2,2.2,0.1,2C0,1.6-0.1,1.2,0.2,0.9
+                    c0.3-0.3,0.8-0.4,1-0.4l3,0l0.1,0c0.1,0,0.4,0.1,0.7,0.3c0.3,0.2,0.4,0.5,0.5,0.6c0,0,0.5,1.1,1.1,2c1,1.5,1.4,1.9,1.5,2
+                    C8.2,5,8.3,4,8.2,3.1c0-0.4-0.1-0.8-0.2-1C7.9,2,7.7,1.9,7.5,1.9L6.9,1.4C6.9,0.9,7.4,0.5,7.8,0.3C8.3,0.1,9.1,0,10.1,0l0.5,0
+                    c0.9,0,1.2,0.1,1.6,0.1c1.2,0.3,1.2,1.3,1.1,2.5c0,0.4,0,0.8,0,1.2c0,0.1,0,0.2,0,0.4c0,0.3,0,0.8,0.1,1c0.2-0.1,0.6-0.5,1.5-1.9
+                    c0.6-0.9,1-1.9,1.1-2.1l0,0c0.1-0.3,0.4-0.7,1.2-0.7l3.1,0c0,0,0.1,0,0.3,0c0.7,0,1.2,0.2,1.3,0.7c0.2,0.5,0.1,1.3-1.7,3.5
+                    c-0.3,0.3-0.5,0.6-0.7,0.9C19,6,18.6,6.6,18.6,6.7c0,0.1,0.5,0.5,0.9,0.9c1.1,0.9,1.9,1.7,2.2,2.3c0.4,0.6,0.3,1,0.2,1.3
+                    c-0.3,0.7-1.2,0.7-1.4,0.8l-2.8,0C17.7,12,17.6,12,17.6,12z M13.7,8.3c0.7,0,1.2,0.6,1.8,1.2c0.4,0.4,0.7,0.8,1.1,1
+                    c0.5,0.3,1,0.3,1,0.3l0.1,0l2.8,0c0.1,0,0.3-0.1,0.4-0.1c0,0,0-0.1-0.1-0.1c-0.3-0.5-1-1.3-2-2.1c-0.9-0.7-1.3-1.1-1.4-1.7
+                    c0-0.6,0.4-1.1,1.2-2.1c0.2-0.2,0.4-0.5,0.7-0.8c1.1-1.4,1.4-2,1.5-2.3c-0.1,0-0.5,0-0.5,0l-3.2,0c-0.1,0-0.2,0-0.2,0
+                    C16.9,2,16.4,3.1,15.8,4c-1.4,2.1-2,2.4-2.5,2.4c-0.1,0-0.3,0-0.4-0.1c-0.7-0.4-0.7-1.4-0.7-2.1c0-0.1,0-0.2,0-0.3
+                    c0-0.5,0-0.9,0-1.3c0.1-1.3,0-1.3-0.3-1.4c-0.3-0.1-0.5-0.1-1.4-0.1l-0.5,0c-0.5,0-1,0-1.4,0.1c0.1,0.1,0.1,0.1,0.2,0.2
+                    c0.4,0.5,0.4,1.5,0.4,1.7c0.1,1.3,0,2.9-0.7,3.3C8.4,6.4,8.3,6.5,8.1,6.5C7.5,6.5,6.8,5.8,5.6,4C5,2.9,4.5,1.8,4.5,1.8
+                    c0,0,0-0.1-0.1-0.1c-0.1,0-0.2-0.1-0.2-0.1l-2.9,0c0,0,0,0-0.1,0c0.4,0.9,2.5,5,4.8,7.2c2,1.9,4.3,2,4.7,2l1.4,0c0,0,0.2,0,0.2-0.1
+                    c0,0,0,0,0-0.1c0-0.2,0-2,1.2-2.3C13.5,8.3,13.6,8.3,13.7,8.3z"/>
+                  </g>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--ig" href="https://www.instagram.com/htmlacademy">Instagram
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve">
+                  <path d="M11.8,1C13.6,1,15,2.4,15,4.2v7.7c0,1.7-1.4,3.1-3.1,3.1H4.2C2.4,15,1,13.6,1,11.8V4.2C1,2.4,2.4,1,4.2,1
+                  L11.8,1 M11.8,0H4.2C1.9,0,0,1.9,0,4.2v7.7C0,14.1,1.9,16,4.2,16h7.7c2.3,0,4.2-1.9,4.2-4.2V4.2C16,1.9,14.1,0,11.8,0L11.8,0z"/>
+                  <path d="M8,4.9c1.7,0,3.1,1.4,3.1,3.1c0,1.7-1.4,3.1-3.1,3.1c-1.7,0-3.1-1.4-3.1-3.1C4.9,6.3,6.3,4.9,8,4.9 M8,3.9
+                  C5.7,3.9,3.9,5.7,3.9,8s1.8,4.1,4.1,4.1s4.1-1.8,4.1-4.1S10.3,3.9,8,3.9L8,3.9z"/>
+                  <circle cx="12.3" cy="3.7" r="0.9"/>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--fb" href="https://www.facebook.com/htmlacademy">Facebook
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 10 19" style="enable-background:new 0 0 10 19;" xml:space="preserve">
+                  <g>
+                    <path
+                      d="M7.1,19H2v-8.8H0V5.8h1.9c-0.1-2,0.2-3.4,1.1-4.4C3.8,0.5,5,0.1,6.5,0L10,0v4.2H7.2C7.1,4.4,7,5,7,5.8H10v4.4H7.1V19z
+                      M3.1,18h2.8V9.1h2.9V6.8H5.9l0-0.5c0-1.4,0-2.6,0.7-3.1l0.1-0.1h2.1V1H6.5c-1.2,0.1-2,0.4-2.6,1c-0.8,0.8-1,2.3-0.8,4.2l0.1,0.6
+                    H1.1v2.3h2V18z"/>
+                  </g>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </section>
+        <section class="page-footer__item developers">
+          <h2 class="visually-hidden">Правообладатель</h2>
+          <a class="developers__link" href="https://htmlacademy.ru/intensive/adaptive">
+            HTML Academy
+            <svg class="developers__logo" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26.943px" height="34.09px" viewBox="0 0 26.943 34.09" enable-background="new 0 0 26.943 34.09" xml:space="preserve">
+              <path d="M13.62,0.017L13.472,0L0,1.412v24.661l13.474,8.017l13.43-7.99l0.042-0.024V1.412L13.62,0.017z M25.019,12.127L13.495,5.334
+                L13.494,5.23l-0.087,0.05l-0.088-0.056v0.109L1.925,12.118V3.147l11.549-1.212L25.02,3.147L25.019,12.127L25.019,12.127z
+                M13.405,6.787L24.923,13.5l-4.479,2.64l-7.093-4.221l-0.015,1.415l5.904,3.513l-0.86,0.507l-5.029-2.992l-0.015,1.415l3.827,2.275
+                l-0.782,0.523l-3.03-1.787l-0.015,1.413l1.854,1.091l-1.8,1.081L2.034,13.622L13.405,6.787z M1.925,15.127l11.411,6.791l0.017,1.044
+                L5.41,18.234L5.395,19.65l7.979,4.795l0.019,1.076l-7.974-4.74l-0.013,1.414l8.021,4.822l0.047,0.024l8.143-4.872l-0.011-5.177
+                l3.415-2.036v10.021L13.472,31.85L1.925,24.979V15.127z"/>
+            </svg>
+          </a>
+        </section>
+      </div>
     </footer>
+
   </body>
 </html>

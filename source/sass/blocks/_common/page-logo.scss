@@ -1,0 +1,60 @@
+.page-logo {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  height: 45px;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  &--index {
+    pointer-events: none;
+  }
+
+  &--footer {
+    padding-top: 29px;
+    padding-bottom: 20px;
+
+    @include tablet {
+      padding: 0;
+      margin-right: 30px;
+
+      .page-logo__title {
+        width: 128px;
+      }
+    }
+  }
+}
+
+.page-logo__image {
+  width: 33px;
+  height: 38px;
+}
+
+.page-logo__title {
+  margin: auto;
+
+  &--header {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+
+  @include tablet {
+    width: 85px;
+  }
+
+  @include desktop {
+    width: 118px;
+    height: 22px;
+  }
+}

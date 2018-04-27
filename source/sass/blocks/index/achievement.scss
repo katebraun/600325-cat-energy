@@ -1,34 +1,68 @@
 .achievement {
+  flex-grow: 1;
+  position: relative;
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
   margin: 0;
-  margin-bottom: 10px;
+
+  & + & {
+    margin-left: 32px;
+
+    @include tablet {
+      margin-left: 42px;
+    }
+
+    @include desktop {
+      flex-grow: 0;
+    }
+  }
 }
 
 .achievement__title {
+  padding: 0 16px;
   position: relative;
-  bottom: 9px;
-  padding: 0 15px;
-  background-color: $grey;
-  text-align: center;
+  bottom: 0.75em;
   font-family: $arial;
   font-size: 12px;
-  line-height: 12px;
-  color: $font-grey;
+  line-height: 1;
+  text-align: center;
   text-transform: lowercase;
+  color: $font-grey;
+  box-sizing: border-box;
+  background-color: $grey;
+
+  @include tablet {
+    padding: 0 6px;
+    font-size: 14px;
+    background-color: #ffffff;
+
+    br {
+      display: none;
+    }
+  }
+
+  @include desktop {
+    background-color: $grey;
+  }
 }
 
 .achievement__value {
-  box-sizing: border-box;
-  min-width: 124px;
   margin: 0;
-  padding-top: 13px;
-  padding-bottom: 17px;
+  padding: 15px 20px;
+  min-width: 124px;
   font-size: 24px;
-  line-height: 24px;
   text-align: center;
+  color: $black;
   text-transform: uppercase;
   border: 1px solid $border-grey;
   border-radius: 3px;
+  box-sizing: border-box;
+
+  @include tablet {
+    padding-bottom: 20px;
+    min-width: 162px;
+    font-size: 30px;
+    line-height: 1.23;
+  }
 }

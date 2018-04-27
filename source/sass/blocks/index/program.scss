@@ -1,79 +1,184 @@
 .program {
-  margin-top: 22px;
+  @include desktop {
+    padding-top: 40px;
+  }
+}
+
+.program__wrapper {
+  @include desktop {
+    padding: 0;
+    display: flex;
+  }
 }
 
 .program__item {
-  min-height: 226px;
   margin-bottom: 20px;
-  padding: 20px;
+  padding: 20px 20px 0;
   background-color: $grey;
-}
+  overflow: hidden;
 
-.program__icon {
-  position: relative;
-  width: 50px;
-  height: 50px;
-  margin-top: 2px;
-  margin-left: 2px;
-  margin-right: 19px;
-  background-color: $green;
-  border-radius: 50%;
-}
+  &:last-child {
+    margin-bottom: 9px;
+  }
 
-.program__icon::after {
-  content: "";
-  position: absolute;
-}
+  @include tablet {
+    position: relative;
+    margin-bottom: 30px;
+    padding: 55px 285px 40px 50px;
 
-.program__icon--slim::after {
-  top: -3px;
-  left: 8px;
-  width: 35px;
-  height: 50px;
-  background-image: url("../img/icon-cat-slim.svg");
-}
+    &--pro {
+      padding-right: 315px;
+    }
+  }
 
-.program__icon--pro::after {
-  top: 10px;
-  left: -9px;
-  width: 67px;
-  height: 28px;
-  background-image: url("../img/icon-cat-pro.svg");
+  @include desktop {
+    width: 570px;
+    margin: 40px;
+    padding: 25px 50px;
+
+    &:last-child {
+      margin-bottom: 40px;
+    }
+  }
 }
 
 .program__title {
   display: flex;
   align-items: center;
-  margin: 3px 0 21px 0;
+  margin: 0;
+  padding: 4px 2px;
   font-size: 24px;
-  line-height: 37px;
+  line-height: 50px;
+  font-weight: normal;
   text-transform: uppercase;
+
+  @include tablet {
+    padding: 22px 0;
+    font-size: 36px;
+    line-height: 1;
+  }
 }
 
-.program__text {
-  padding: 0 0 22px 0;
-  margin-bottom: 17px;
-  font-family: $arial;
-  font-size: 14px;
-  line-height: 18px;
-  color: $font-grey;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+.program__icon {
+  position: relative;
+  margin-right: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: $green;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &--slim::after {
+    width: 100%;
+    height: 97%;
+    top: 42.5%;
+    background: url("../img/icon-cat-slim.svg") no-repeat center;
+  }
+
+  &--pro::after {
+    width: 135%;
+    height: 95%;
+    top: 50%;
+    background: url("../img/icon-cat-pro.svg") no-repeat center;
+  }
+
+  @include tablet {
+    position: absolute;
+    right: 42px;
+    top: 92px;
+    width: 200px;
+    height: 200px;
+  }
+
+  @include desktop {
+    position: relative;
+    top: auto;
+    right: auto;
+    margin-right: 60px;
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.program__description {
+  margin: 0;
+  padding: 20px 0;
+  border-bottom: 1px solid #d9d9d9;
+
+  @include tablet {
+    padding-top: 5px;
+    padding-bottom: 35px;
+    font-size: 16px;
+    line-height: 1.5;
+    border-bottom: 0;
+  }
+
+  @include desktop {
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
 }
 
 .program__link {
-  position: relative;
-  line-height: 20px;
-  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  padding: 20px 0;
+  margin-bottom: 1px;
   text-decoration: none;
   color: $black;
-}
+  text-transform: uppercase;
+  border-left: 0;
 
-.program__link::after {
-  content: "";
-  position: absolute;
-  top: 7px;
-  right: -35px;
-  width: 24px;
-  height: 11px;
-  background-image: url("../img/icon-right-arrow-long.svg");
+  &::before,
+  &::after {
+    display: block;
+    content: "";
+    transition: all 0.2s ease-out;
+  }
+
+  &::before {
+    order: 1;
+    margin-left: 10px;
+    width: 19px;
+    height: 3px;
+    background-color: $font-grey;
+  }
+
+  &::after {
+    order: 2;
+    border: 5.5px solid transparent;
+    border-left-color: $font-grey;
+  }
+
+  &:hover::before {
+    width: 27px;
+  }
+
+  &:active {
+    opacity: 0.3;
+    transition: none;
+  }
+
+  @include tablet {
+    display: inline-flex;
+    font-size: 20px;
+    padding-left: 2px;
+    border: 0;
+
+    &::before {
+      margin-left: 25px;
+    }
+  }
+
+  @include desktop {
+    padding: 11px 0;
+    margin-bottom: 27px;
+  }
 }

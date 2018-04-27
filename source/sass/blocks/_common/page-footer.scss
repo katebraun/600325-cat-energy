@@ -1,14 +1,25 @@
-.page-footer__wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 20px;
-  margin-top: -2px;
+.page-footer {
   background-color: $grey;
 }
 
-.page-footer__logo {
-  width: 130px;
-  padding-top: 19px;
-  padding-bottom: 17px;
+.page-footer__bottom {
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 49px;
+    padding-bottom: 47px;
+  }
+
+  @include desktop {
+    padding-top: 52px;
+  }
+}
+
+.page-footer__item {
+  padding: 20px 0;
+
+  @include tablet {
+    padding: 0;
+  }
 }

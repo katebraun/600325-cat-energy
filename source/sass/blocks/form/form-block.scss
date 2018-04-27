@@ -1,121 +1,267 @@
-.form-block--no-border {
-  padding-top: 5px;
-  padding-bottom: 10px;
+.form-block {
+  &--no-title {
+    padding: 10px 0;
+
+    @include tablet {
+      padding: 30px 0;
+    }
+
+    @include desktop {
+      padding-bottom: 0;
+    }
+  }
+
+  &--bordered {
+    margin: 0 -20px;
+    padding: 9px 20px;
+    outline: 1px solid $border-grey;
+
+    @include tablet {
+      margin: 25px 41px 77px 40px;
+      padding: 12px 30px;
+    }
+
+    @include desktop {
+      flex-grow: 1;
+      margin: 48px 0 27px 80px;
+    }
+  }
 }
 
-.form-block__unit {
+.form-block__title {
+  @include tablet {
+    margin: 62px 0 75px;
+
+    &--last {
+      margin-bottom: 40px;
+    }
+  }
+
+  @include desktop {
+    margin: 46px 0 60px;
+
+    &--last {
+      margin: 62px 0 40px;
+    }
+  }
+}
+
+.form-block__row {
   margin: 14px 0;
+
+  @include tablet {
+    margin: 16px 0;
+    padding: 0 40px;
+    padding-bottom: 4px;
+  }
+
+  @include desktop {
+    padding-left: 0;
+    padding-right: 0;
+    width: 570px;
+
+    &--textarea {
+      width: auto;
+    }
+  }
 }
 
 .form-block__item {
+  max-width: 100%;
   display: flex;
   align-items: center;
-  max-width: 100%;
-  margin: 0;
+}
+
+.form-block__label,
+.form-block__input,
+.form-block__input::placeholder {
+  font-family: $oswald;
+  line-height: 1.12;
   text-transform: uppercase;
+
+  @include tablet {
+    line-height: 1;
+  }
 }
 
 .form-block__label {
   margin-right: 10px;
+
+  @include desktop {
+    margin-right: 20px;
+  }
 }
 
-.form-block--no-border .form-block__label {
+.form-block--no-title .form-block__label {
   margin-right: 15px;
 }
 
 .form-block__input {
+  display: inline-block;
   flex-grow: 1;
-  box-sizing: border-box;
+  padding: 13px;
+  min-width: 70px;
   height: 45px;
-  padding: 13px 14px;
+  color: $font-grey;
   border: 1px solid $border-grey;
+  outline: none;
+  box-sizing: border-box;
+
+  &:hover {
+    border-color: #bababa;
+  }
+
+  &:active,
+  &:focus {
+    border-color: $font-grey;
+    box-shadow: inset 0 0 0 1px $font-grey;
+  }
+
+  &:active:invalid,
+  &:focus:invalid,
+  &.invalid {
+    border-color: $red;
+    box-shadow: inset 0 0 0 1px $red;
+  }
+
+  @include tablet {
+    height: 52px;
+    line-height: 1.5;
+    padding: 10px 20px;
+  }
+
+  &--textarea {
+    height: 150px;
+    box-sizing: border-box;
+    resize: none;
+
+    @include tablet {
+      height: 175px;
+      padding: 15px 20px;
+    }
+
+    @include desktop {
+      margin-top: 16px;
+    }
+  }
 }
 
-.form-block__input[placeholder] {
-  text-transform: uppercase;
+.form-block__input-wrapper {
+  position: relative;
+  display: flex;
+  flex-grow: 1;
+
+  .form-block__input {
+    padding-right: 50px;
+  }
 }
 
-.form-block--bordered {
-  margin: 0 -20px;
-  padding: 7px 20px;
-  outline: 1px solid $border-grey;
+.form-block__icon {
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  width: 20px;
+
+  .form-block__input:active + &,
+  .form-block__input:focus + & {
+    fill: $green;
+  }
+
+  .form-block__input:active:invalid + &,
+  .form-block__input:focus:invalid + &,
+  .invalid + & {
+    fill: $red;
+  }
 }
 
 .form-block__list {
   @include reset-list;
+
+  &--checkbox {
+    @include tablet {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding-left: 40px;
+    }
+
+    @include desktop {
+      padding-left: 0;
+    }
+  }
 }
 
 .form-block__list-item {
-  margin: 13px 0;
+  margin: 12px 0;
+}
+
+.form-block__list--checkbox .form-block__list-item {
+  @include tablet {
+    width: 325px;
+    margin: 16px 0;
+  }
+
+  @include desktop {
+    width: 245px;
+    margin: 16px 0;
+  }
 }
 
 .form-block__label--radio,
 .form-block__label--checkbox {
-  position: relative;
   display: flex;
-  flex-grow: 1;
   align-items: center;
-  margin-right: 0;
   cursor: pointer;
-}
+  flex-grow: 1;
+  margin-right: 0;
 
-.form-block__label--radio::before,
-.form-block__label--checkbox::before {
-  content: "";
-  display: block;
-  flex-shrink: 0;
-  box-sizing: border-box;
-  width: 30px;
-  height: 30px;
-  margin-right: 15px;
-  background-color: $white;
-  border: 1px solid $border-grey;
+  &::before {
+    display: block;
+    content: "";
+    flex-shrink: 0;
+    margin-right: 15px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid $border-grey;
+    background-color: #ffffff;
+    box-sizing: border-box;
+
+    @include tablet {
+      margin-right: 20px;
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  &:hover::before {
+    border-color: #bababa;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .form-block__label--radio::before {
   border-radius: 50%;
 }
 
-.form-block__radio:checked + .form-block__label--radio::after {
-  position: absolute;
-  content: "";
-  top: 9px;
-  left: 9px;
-  width: 12px;
-  height: 12px;
-  background-color: $green;
-  border-radius: 50%;
+.form-block__radio:checked + .form-block__label--radio::before {
+  background-image: radial-gradient($green 0, $green 6px, #ffffff 7px, #ffffff 100%);
+
+  @include tablet {
+    background-image: radial-gradient($green 0, $green 9px, #ffffff 10px, #ffffff 100%);
+  }
 }
 
-.form-block__title {
-  margin-top: 29px;
-  margin-bottom: 34px;
-  padding-left: 20px;
-  max-width: 70%;
-  line-height: 24px;
+.form-block__label--checkbox:active::before,
+.form-block__checkbox:checked + .form-block__label--checkbox::before {
+  background: url("../img/icon-tick.svg") no-repeat center;
+  background-size: 21px;
 }
 
-.form-block__input--textarea {
-  min-height: 150px;
-  padding-right: 13px;
-}
-
-.form-block__list--checkbox .form-block__list-item {
-  margin: 12px 0;
-}
-
-.form-block__checkbox:checked + .form-block__label--checkbox::after {
-  position: absolute;
-  content: "";
-  top: 7px;
-  left: 5px;
-  width: 21px;
-  height: 16px;
-  background-image: url("../img/icon-tick.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.form-block__submit {
-  margin-top: 35px;
+.form-block__checkbox:checked + .form-block__label--checkbox:active::before {
+  background-image: none;
 }

@@ -1,26 +1,39 @@
 .page-header {
   position: relative;
   background-color: $white;
+
+  @include desktop {
+    &--index {
+      z-index: 0;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: calc(50% + 40px);
+        background-image: url("../img/index-background-mobile@1x.jpg");
+        background-repeat: no-repeat;
+        background-position: left center;
+        background-size: cover;
+        background-color: $green;
+        z-index: -1;
+      }
+    }
+  }
 }
 
-.page-header__logo {
-  position: relative;
-  display: flex;
-  align-items: center;
-  min-height: 45px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
+.page-header__wrapper {
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
 
-.page-header__logo-header {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-}
-
-.page-header__logo-image {
-  margin-top: -5px;
+  @include desktop {
+    padding-top: 52px;
+  }
 }

@@ -8,6 +8,7 @@
     margin: 0 -30px;
     background-image: linear-gradient(#ffffff 0, #ffffff 180px, $grey 180px, $grey 100%);
     overflow: hidden;
+    padding-bottom: 33px;
   }
 
   @include desktop {
@@ -20,7 +21,7 @@
 
 .slider__images {
   position: relative;
-  margin: 0 -20px;
+  margin: -2px -20px;
   width: 320px;
   height: 240px;
 
@@ -79,17 +80,13 @@
     }
   }
 
-  img {
-    max-width: inherit;
+  @include tablet {
+    width: 680px;
+    height: 517px;
+  }
 
-    @include tablet {
-      width: 680px;
-      height: 517px;
-    }
-
-    @include desktop {
-      width: 690px;
-    }
+  @include desktop {
+    width: 690px;
   }
 }
 
@@ -107,13 +104,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 30px;
+  margin-top: 32px;
   padding: 2px;
   z-index: 1;
 
   @include tablet {
-    margin-top: 15px;
-    margin-bottom: 30px;
+    margin-top: 12px;
+    margin-bottom: 33px;
   }
 
   @include desktop {
@@ -122,7 +119,7 @@
 }
 
 .slider__btn {
-  margin: 0 20px;
+  margin: 0 16px 0 20px;
   line-height: 1.25;
   text-align: center;
   text-transform: uppercase;
@@ -130,6 +127,7 @@
   cursor: pointer;
 
   @include tablet {
+    margin: 0 23px 0 22px;
     padding: 6px 0;
     font-size: 20px;
     line-height: 1;
@@ -149,7 +147,7 @@
   display: inline-flex;
   align-items: center;
   padding: 4px 6px;
-  width: 85px;
+  width: 83px;
   height: 14px;
   border-radius: 6px;
   background-color: #ffffff;
@@ -157,7 +155,7 @@
   box-sizing: border-box;
 
   @include tablet {
-    padding: 4px 0;
+    padding: 0;
     width: 428px;
     height: 6px;
     background-color: $border-grey;
@@ -176,7 +174,7 @@
   transition: margin-left 0.35s ease-out;
 
   @include tablet {
-    margin-left: calc(50% - 17px);
+    margin-left: calc(50% - 15px);
     width: 34px;
     height: 34px;
     background-image: radial-gradient($green 0, $green 4px, #ffffff 5px, #ffffff 100%);

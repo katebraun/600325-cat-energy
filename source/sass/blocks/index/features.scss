@@ -7,12 +7,20 @@
 
   @include desktop {
     padding-bottom: 0;
+    margin-top: -3px;
+  }
+}
+
+.features .page__title {
+  @include tablet {
+    padding-top: 36px;
+    padding-bottom: 35px;
   }
 }
 
 .features__list {
   @include reset-list;
-  padding-bottom: 2px;
+  padding-bottom: 1px;
 
   @include tablet {
     display: flex;
@@ -40,20 +48,20 @@
     &::after {
       content: counter(features_num);
       position: absolute;
-      top: 40px;
-      right: 80px;
+      top: 92px;
+      right: 78px;
       font-size: 280px;
       color: #f2f2f2;
       z-index: -1;
     }
 
     &:first-child::after {
-      right: 95px;
+      right: 96px;
     }
   }
 
   @include desktop {
-    margin: 35px 0 0;
+    margin: 37px 0 0;
     width: 245px;
 
     &::after {
@@ -79,7 +87,7 @@
     @include tablet {
       width: 80px;
       height: 80px;
-      margin-bottom: 30px;
+      margin-bottom: 31px;
     }
   }
 

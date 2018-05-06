@@ -27,8 +27,8 @@
   }
 
   @include tablet {
-    margin: 110px 30px 30px;
-    padding: 40px 38px;
+    margin: 107px 30px 33px;
+    padding: 40px 37px;
     width: 324px;
     border-top: none;
     box-sizing: border-box;
@@ -44,6 +44,7 @@
     width: 245px;
     margin-left: 40px;
     margin-right: 40px;
-    padding: 41px 38px;
+    margin-bottom: 36px;
+    padding: 40px 38px;
   }
 }

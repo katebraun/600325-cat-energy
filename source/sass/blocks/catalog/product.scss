@@ -46,7 +46,8 @@
 
 .product__name {
   width: 60%;
-  padding-bottom: 10px;
+  margin-top: 0;
+  margin-bottom: 12px;
 
   @include tablet {
     margin: 0 auto;
@@ -82,7 +83,7 @@
 
 
   @include tablet {
-    margin-top: 10px;
+    margin-top: 20px;
     margin-bottom: 33px;
 
     & tr {
@@ -127,10 +128,15 @@
     width: 240px;
     height: 60px;
     background: url("../img/icon-gift.svg") no-repeat center;
+
+    @include tablet {
+      width: 237px;
+    }
   }
 
   @include desktop {
     width: 245px;
+    padding-bottom: 23px;
   }
 }
 
@@ -147,6 +153,7 @@
     margin-top: 25px;
     width: 285px;
     text-align: left;
+    line-height: 20px;
   }
 
   @include desktop {

@@ -66,8 +66,8 @@
   }
 
   @include tablet {
-    margin: 0 18px;
-    padding: 10px 0;
+    margin: 12px 18px;
+    padding: 9px 0;
     font-size: 18px;
     line-height: 1.38;
 
@@ -77,6 +77,7 @@
   }
 
   @include desktop {
+    margin: 12px 17px;
     font-size: 20px;
     line-height: 1.24;
   }

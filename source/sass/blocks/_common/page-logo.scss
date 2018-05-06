@@ -18,9 +18,9 @@
     pointer-events: none;
   }
 
-  &--footer {
-    padding-top: 29px;
-    padding-bottom: 20px;
+  &--footer.page-footer__item {
+    padding-top: 32px;
+    padding-bottom: 19px;
 
     @include tablet {
       padding: 0;

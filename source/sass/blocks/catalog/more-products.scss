@@ -8,7 +8,7 @@
 
 .more-products__icon {
   position: relative;
-  margin: 25px 0;
+  margin: 26px 0;
   width: 30px;
   height: 30px;
   opacity: 0.2;
@@ -39,6 +39,10 @@
     &::after {
       background-color: #818181;
     }
+
+    @include desktop {
+      margin: 13px 0 18px;
+    }
   }
 }
 
@@ -46,6 +50,8 @@
   font-weight: 300;
   padding-bottom: 6px;
   text-transform: uppercase;
+  margin-top: -3px;
+  margin-bottom: 1px;
 
   @include tablet {
     margin: 30px auto 20px;
@@ -67,6 +73,7 @@
     width: 170px;
     font-size: 16px;
     line-height: 20px;
+    margin-bottom: 82px;
   }
 }
 

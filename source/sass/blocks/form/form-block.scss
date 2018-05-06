@@ -17,13 +17,13 @@
     outline: 1px solid $border-grey;
 
     @include tablet {
-      margin: 25px 41px 77px 40px;
-      padding: 12px 30px;
+      margin: 24px 38px 76px 42px;
+      padding: 13px 27px;
     }
 
     @include desktop {
       flex-grow: 1;
-      margin: 48px 0 27px 80px;
+      margin: 48px 0 24px 80px;
     }
   }
 }
@@ -51,7 +51,7 @@
 
   @include tablet {
     margin: 16px 0;
-    padding: 0 40px;
+    padding: 0 37px 0 40px;
     padding-bottom: 4px;
   }
 
@@ -87,13 +87,17 @@
 .form-block__label {
   margin-right: 10px;
 
+  @include tablet {
+    margin-right: 17px;
+  }
+
   @include desktop {
     margin-right: 20px;
   }
 }
 
 .form-block--no-title .form-block__label {
-  margin-right: 15px;
+  margin-right: 18px;
 }
 
 .form-block__input {
@@ -159,8 +163,8 @@
 .form-block__icon {
   display: block;
   position: absolute;
-  top: 50%;
-  right: 15px;
+  top: 53%;
+  right: 17px;
   transform: translateY(-50%);
   width: 20px;
 
@@ -264,4 +268,16 @@
 
 .form-block__checkbox:checked + .form-block__label--checkbox:active::before {
   background-image: none;
+}
+
+.form-block--margin {
+  @include desktop {
+    margin-bottom: 47px;
+  }
+}
+
+.form-block__label--phone {
+  @include desktop {
+    margin-right: 15px;
+  }
 }

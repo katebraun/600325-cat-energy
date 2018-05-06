@@ -49,7 +49,7 @@
 
 .achievement__value {
   margin: 0;
-  padding: 15px 20px;
+  padding: 17px 20px;
   min-width: 124px;
   font-size: 24px;
   text-align: center;
@@ -60,7 +60,6 @@
   box-sizing: border-box;
 
   @include tablet {
-    padding-bottom: 20px;
     min-width: 162px;
     font-size: 30px;
     line-height: 1.23;

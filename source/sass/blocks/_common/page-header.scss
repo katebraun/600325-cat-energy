@@ -13,12 +13,16 @@
         bottom: 4px;
         right: 0;
         left: calc(50% - 1px);
-        background-image: url("../img/index-background-mobile@1x.jpg");
+        background-image: url("../img/rastr/index-background-mobile@1x.jpg");
         background-repeat: no-repeat;
         background-position: left center;
         background-size: cover;
         background-color: $green;
         z-index: -1;
+
+        @include retina {
+          background-image: url("../img/rastr/index-background-desktop@2x.jpg");
+        }
       }
     }
   }

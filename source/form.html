@@ -12,8 +12,11 @@
     <header class="page-header">
       <div class="page-header__wrapper container">
         <a class="page-logo" href="index.html" >
-          <img class="page-logo__image" src="img/logo-image-mobile.svg" alt="Cat Energy" width="33" height="38">
-          <img class="page-logo__title page-logo__title--header" src="img/logo-header-mobile.svg" alt="Cat Energy" width="101" height="18">
+          <picture>
+            <source media="(min-width: 1300px)" srcset="img/vector/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/vector/logo-tablet.svg">
+            <img class="page-logo__image" src="img/vector/logo-mobile.svg" alt="Cat Energy logo" width="191" height="38">
+          </picture>
         </a>
         <nav class="page-nav page-nav--opened">
           <button class="page-nav__toggle menu-toggle" type="button">Показать меню</button>
@@ -163,7 +166,7 @@
 
         <footer class="program-form__footer container">
           <button class="program-form__submit-btn page__btn">Отправить заявку</button>
-          <p class="program-form__note page__text"><sup>*</sup> — Обязательные поля</p>
+          <p class="program-form__note page__text">* — Обязательные поля</p>
         </footer>
       </form>
     </main>
@@ -171,7 +174,7 @@
     <footer class="page-footer">
       <div class="contacts">
         <div class="contacts__text-wrapper">
-          <div class="contacts__text contacts__text--white">
+          <div class="contacts__text">
             <p class="contacts__half contacts__promo page__block-title">
               Приглашаем к&nbsp;сотрудничеству дилеров!
             </p>
@@ -189,7 +192,7 @@
       <div class="page-footer__bottom container">
         <div class="page-footer__item page-logo page-logo--footer">
           <a class="page-logo__title" href="index.html">
-            <img src="img/logo-header-mobile.svg" alt="Cat Energy" width="128" height="24">
+            <img src="img/vector/logo-header-mobile.svg" alt="Cat Energy" width="128" height="24">
           </a>
         </div>
         <section class="page-footer__item social">

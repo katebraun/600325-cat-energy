@@ -12,8 +12,11 @@
     <header class="page-header page-header--index">
       <div class="page-header__wrapper container">
         <a class="page-logo page-logo--index">
-          <img class="page-logo__image" src="img/logo-image-mobile.svg" alt="Cat Energy" width="33" height="38">
-          <img class="page-logo__title page-logo__title--header" src="img/logo-header-mobile.svg" alt="Cat Energy" width="101" height="18">
+          <picture>
+            <source media="(min-width: 1300px)" srcset="img/vector/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/vector/logo-tablet.svg">
+            <img class="page-logo__image" src="img/vector/logo-mobile.svg" alt="Cat Energy logo" width="191" height="38">
+          </picture>
         </a>
         <nav class="page-nav page-nav--opened">
           <button class="page-nav__toggle menu-toggle" type="button">Показать меню</button>
@@ -32,7 +35,14 @@
           <p class="promo__content promo__text">
             Занялся собой? Займись котом!
           </p>
-          <img class="promo__image" src="img/index-can-mobile@1x.png" alt="Внешний вид товара" width="280" height="270">
+          <picture class="promo__image--wrapper">
+            <source type="image/webp" media="(min-width: 1300px)" srcset="img/webp/index-can-desktop@1x.webp 1x, img/webp/index-can-desktop@2x.webp 2x">
+            <source media="(min-width: 1300px)" srcset="img/rastr/index-can-desktop@1x.png 1x, img/rastr/index-can-desktop@2x.png 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/index-can-tablet@1x.webp 1x, img/webp/index-can-tablet@2x.webp 2x">
+            <source media="(min-width: 768px)" srcset="img/rastr/index-can-tablet@1x.jpg 1x, img/rastr/index-can-tablet@2x.jpg 2x">
+            <source type="image/webp" srcset="img/webp/index-can-mobile@1x.webp 1x, img/webp/index-can-mobile@2x.webp 2x">
+            <img class="promo__image" src="img/rastr/index-can-mobile@1x.png" alt="Внешний вид товара" width="280" height="270">
+          </picture>
           <a class="promo__content promo__btn page__btn" href="form.html">
             Подобрать программу
           </a>
@@ -127,10 +137,24 @@
 
             <div class="slider__images">
               <div class="slider__image slider__image--before">
-                <img src="img/before-mobile@1x.png" width="320" height="240" alt="Борис до похудения">
+                <picture class="slider__before-block">
+                  <source type="image/webp" media="(min-width: 1300px)" srcset="img/webp/before-desktop@1x.webp 1x, img/webp/before-desktop@2x.webp 2x">
+                  <source media="(min-width: 1300px)" srcset="img/rastr/before-desktop@1x.png 1x, img/rastr/before-desktop@2x.png 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/before-tablet@1x.webp 1x, img/webp/before-tablet@2x.webp 2x">
+                  <source media="(min-width: 768px)" srcset="img/rastr/before-tablet@1x.png 1x, img/rastr/before-tablet@2x.png 2x">
+                  <source type="image/webp" srcset="img/webp/before-mobile@1x.webp 1x, img/webp/before-mobile@2x.webp 2x">
+                  <img src="img/rastr/before-mobile@1x.png" srcset="img/rastr/before-mobile@2x.png 2x" width="320" height="240" alt="Борис до похудения">
+                </picture>
               </div>
               <div class="slider__image slider__image--after">
-                <img src="img/after-mobile@1x.png" width="320" height="240" alt="Борис после похудения">
+                <picture class="slider__after-block">
+                  <source type="image/webp" media="(min-width: 1300px)" srcset="img/webp/after-desktop@1x.webp 1x, img/webp/after-desktop@2x.webp 2x">
+                  <source media="(min-width: 1300px)" srcset="img/rastr/after-desktop@1x.png 1x, img/rastr/after-desktop@2x.png 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/after-tablet@1x.webp 1x, img/webp/after-tablet@2x.webp 2x">
+                  <source media="(min-width: 768px)" srcset="img/rastr/after-tablet@1x.png 1x, img/rastr/after-tablet@2x.png 2x">
+                  <source type="image/webp" srcset="img/webp/after-mobile@1x.webp 1x, img/webp/after-mobile@2x.webp 2x">
+                  <img src="img/rastr/after-mobile@1x.png" srcset="img/rastr/after-mobile@2x.png 2x" width="320" height="240" alt="Борис после похудения">
+                </picture>
               </div>
             </div>
             <div class="slider__actions">
@@ -166,7 +190,7 @@
       <div class="page-footer__bottom container">
         <div class="page-footer__item page-logo page-logo--index page-logo--footer">
           <a class="page-logo__title">
-            <img src="img/logo-header-mobile.svg" alt="Cat Energy" width="128" height="24">
+            <img src="img/vector/logo-header-mobile.svg" alt="Cat Energy" width="128" height="24">
           </a>
         </div>
         <section class="page-footer__item social">

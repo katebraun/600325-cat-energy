@@ -6,7 +6,7 @@
 
   @include tablet {
     margin: 0 -30px;
-    background-image: linear-gradient(#ffffff 0, #ffffff 180px, $grey 180px, $grey 100%);
+    background-image: linear-gradient(#ffffff 0, #ffffff 180px, #eaeaea 180px, $grey 100%);
     overflow: hidden;
     padding-bottom: 33px;
   }
@@ -14,19 +14,19 @@
   @include desktop {
     padding-bottom: 35px;
     margin: 0;
-    background-image: linear-gradient(#ffffff 0, #ffffff 200px, $grey 200px, $grey 100%);
+    background-image: linear-gradient(#ffffff 0, #ffffff 204px, $grey 204px, $grey 100%);
     overflow: visible;
   }
 }
 
 .slider__images {
   position: relative;
-  margin: -2px -20px;
+  margin: -1px -20px;
   width: 320px;
   height: 240px;
 
   @include tablet {
-    margin: 10px 0 0;
+    margin: 14px 0 -4px;
     width: 680px;
     height: 517px;
   }
@@ -42,7 +42,7 @@
   bottom: 0;
   width: 100%;
   overflow: hidden;
-  transition: width 0.5s ease-out;
+  transition: width 0.4s ease-out;
 
   &--after {
     display: flex;
@@ -59,7 +59,7 @@
     &--after {
       align-items: flex-end;
       box-shadow: 400px 570px 0 400px #eaeaea;
-      background-image: linear-gradient(#ffffff 0, #ffffff 170px, #eaeaea 170px, #eaeaea 100%);
+      background-image: linear-gradient(#ffffff 0, #ffffff 166px, #eaeaea 166px, #eaeaea 100%);
 
       img {
         z-index: 1;
@@ -80,13 +80,17 @@
     }
   }
 
-  @include tablet {
-    width: 680px;
-    height: 517px;
-  }
+  img {
+    max-width: inherit;
 
-  @include desktop {
-    width: 690px;
+    @include tablet {
+      width: 680px;
+      height: 517px;
+    }
+
+    @include desktop {
+      width: 690px;
+    }
   }
 }
 
@@ -200,4 +204,26 @@
 
 .slider__after:checked ~ .slider__actions .slider__grip {
   margin-left: calc(100% - 34px);
+}
+
+.slider__after-block {
+  @include tablet {
+    margin-right: -9px;
+  }
+
+  @include desktop {
+    margin-right: 0;
+  }
+}
+
+.slider__before-block {
+  @include tablet {
+    margin-left: 5px;
+    margin-top: -3px;
+  }
+
+  @include desktop {
+    margin-left: 0;
+    margin-top: 0;
+  }
 }

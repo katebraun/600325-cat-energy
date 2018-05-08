@@ -21,6 +21,8 @@
   &--footer.page-footer__item {
     padding-top: 32px;
     padding-bottom: 19px;
+    display: flex;
+    justify-content: center;
 
     @include tablet {
       padding: 0;
@@ -34,27 +36,15 @@
 }
 
 .page-logo__image {
-  width: 33px;
-  height: 38px;
-}
-
-.page-logo__title {
-  margin: auto;
-
-  &--header {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-  }
+  width: 191px;
 
   @include tablet {
-    width: 85px;
+    width: 173px;
+    height: 58px;
   }
 
   @include desktop {
-    width: 118px;
-    height: 22px;
+    width: 202px;
+    height: 59px;
   }
 }

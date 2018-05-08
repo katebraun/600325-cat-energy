@@ -83,7 +83,7 @@
 
 
   @include tablet {
-    margin-top: 20px;
+    margin-top: 18px;
     margin-bottom: 33px;
 
     & tr {
@@ -103,22 +103,34 @@
   flex-direction: column;
   align-items: center;
   padding: 15px 0 30px;
-  background-image: url("../img/gift-photo-mobile@1x.jpg");
+  background-image: url("../img/rastr/gift-photo-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+
+  @include retina {
+    background-image: url("../img/rastr/gift-photo-mobile@2x.jpg");
+  }
 
   @include tablet {
     flex-direction: row;
     justify-content: space-between;
     padding-bottom: 25px;
-    background-image: url("../img/gift-photo-mobile@1x.jpg");
+    background-image: url("../img/rastr/gift-photo-tablet@1x.jpg");
+
+    @include retina {
+      background-image: url("../img/rastr/gift-photo-tablet@2x.jpg");
+    }
   }
 
   @include desktop {
     flex-direction: column;
     justify-content: flex-start;
-    background-image: url("../img/gift-photo-mobile@1x.jpg");
+    background-image: url("../img/rastr/gift-photo-desktop@1x.jpg");
+
+    @include retina {
+      background-image: url("../img/rastr/gift-photo-desktop@2x.jpg");
+    }
   }
 
   &::before {
@@ -127,7 +139,7 @@
     display: block;
     width: 240px;
     height: 60px;
-    background: url("../img/icon-gift.svg") no-repeat center;
+    background: url("../img/vector/icon-gift.svg") no-repeat center;
 
     @include tablet {
       width: 237px;
@@ -142,10 +154,10 @@
 
 .promotion__text {
   flex-grow: 1;
-  margin: 15px 0;
+  margin: 12px 0;
   text-align: center;
   font-family: $arial;
-  line-height: 18px;
+  line-height: 20px;
   color: #ffffff;
 
   @include tablet {
@@ -157,7 +169,7 @@
   }
 
   @include desktop {
-    margin-top: 15px;
+    margin-top: 12px;
     text-align: center;
   }
 }

@@ -8,6 +8,13 @@
   background-color: #61a63c;
   background-size: 100%;
 
+  @include retina {
+    background-image:
+      linear-gradient(to top, #ffffff 97px, transparent 97px),
+      url("../img/rastr/index-background-mobile@2x.jpg"),
+      linear-gradient(to top, #ffffff 197px, #61a63c 197px);
+  }
+
   @include tablet {
     background: #ffffff;
   }

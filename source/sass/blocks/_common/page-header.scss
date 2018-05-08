@@ -13,11 +13,11 @@
         bottom: 4px;
         right: 0;
         left: calc(50% - 1px);
-        background-image: url("../img/rastr/index-background-mobile@1x.jpg");
+        background-image: url("../img/rastr/index-background-mobile@2x.jpg");
         background-repeat: no-repeat;
-        background-position: left center;
-        background-size: cover;
-        background-color: $green;
+        background-position: right center;
+        background-size: contain;
+        background-color: #64a83b;
         z-index: -1;
 
         @include retina {

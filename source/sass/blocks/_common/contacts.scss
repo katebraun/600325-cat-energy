@@ -33,7 +33,7 @@
   @include tablet {
     justify-content: space-between;
     align-items: center;
-    padding: 63px 70px 58px;
+    padding: 63px 72px 58px 71px;
 
     &--white {
       background-color: #ffffff;
@@ -42,8 +42,8 @@
 
   @include desktop {
     margin-bottom: 10px;
-    padding-bottom: 58px;
-    padding-top: 62px;
+    padding-bottom: 56px;
+    padding-top: 63px;
     padding-left: 75px;
     padding-right: 85px;
     z-index: 1;

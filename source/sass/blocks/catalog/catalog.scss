@@ -10,6 +10,10 @@
     justify-content: center;
     flex-wrap: wrap;
   }
+
+  @include desktop {
+    margin-bottom: 41px;
+  }
 }
 
 .catalog__header {
@@ -27,8 +31,8 @@
   }
 
   @include tablet {
-    margin: 107px 30px 33px;
-    padding: 40px 37px;
+    margin: 107px 30px 34px;
+    padding: 42px 37px 39px;
     width: 324px;
     border-top: none;
     box-sizing: border-box;
@@ -42,9 +46,7 @@
 
   @include desktop {
     width: 245px;
-    margin-left: 40px;
-    margin-right: 40px;
-    margin-bottom: 36px;
-    padding: 40px 38px;
+    margin: 107px 40px 35px;
+    padding: 43px 38px 39px;
   }
 }

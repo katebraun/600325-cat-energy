@@ -75,11 +75,12 @@
   line-height: 1;
 
   @include tablet {
-    margin: 10px 0 10px;
+    margin: 8px 0 12px 2px;
   }
 
   @include desktop {
     width: 325px;
+    margin: 10px 0 10px 2px;
   }
 }
 
@@ -87,13 +88,13 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
-  margin-top: 0;
-  margin-bottom: 11px;
+  margin-top: -1px;
+  margin-bottom: 12px;
   color: $font-grey;
 
   @include tablet {
     width: auto;
-    margin-top: 8px;
+    margin-top: 6px;
     margin-bottom: 0;
   }
 
@@ -110,6 +111,13 @@
   @include desktop {
     text-align: left;
     width: 80px;
+    margin: 2px 3px 0 0;
+  }
+}
+
+.additional__volume {
+  @include desktop {
+    margin: 2px 0 0 -1px;
   }
 }
 
@@ -119,7 +127,7 @@
   }
 
   @include desktop {
-    margin: 0;
+    margin: 0 0 0 -2px;
     width: 245px;
   }
 }

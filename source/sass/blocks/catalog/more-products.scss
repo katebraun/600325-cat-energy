@@ -31,7 +31,7 @@
   }
 
   @include tablet {
-    margin: 15px 0 17px;
+    margin: 12px 0 19px;
     width: 60px;
     height: 60px;
 
@@ -41,7 +41,7 @@
     }
 
     @include desktop {
-      margin: 13px 0 18px;
+      margin: 11px 0 19px;
     }
   }
 }
@@ -73,6 +73,11 @@
     font-size: 16px;
     line-height: 20px;
     margin-bottom: 82px;
+  }
+
+  @include desktop {
+    line-height: 19px;
+    margin-bottom: 83px;
   }
 }
 

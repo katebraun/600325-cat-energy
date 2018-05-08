@@ -43,8 +43,7 @@
 
 .program-form__submit-btn {
   @include tablet {
-    margin-left: 40px;
-    margin-right: 60px;
+    margin: 2px 60px -2px 40px;
     width: 285px;
     padding: 16px;
     font-size: 20px;
@@ -52,6 +51,7 @@
 
   @include desktop {
     margin-left: 0;
+    margin-top: -1px;
     width: 570px;
     margin-right: 80px;
   }

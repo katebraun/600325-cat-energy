@@ -43,6 +43,8 @@
 }
 
 .promo__title {
+  font-weight: 400;
+
   @include desktop {
     margin-top: 34px;
   }
@@ -52,6 +54,7 @@
   margin-top: 2px;
   margin-bottom: 25px;
   font-size: 14px;
+  font-weight: 400;
   text-transform: uppercase;
 
   @include tablet {
@@ -87,7 +90,7 @@
 .promo__image {
   margin: 0 auto;
   height: auto;
-  animation-name: fadeInLeft;
+  animation-name: fadeleft;
   animation-duration: 1.5s;
 
   @include tablet {
@@ -111,6 +114,7 @@
 .promo__btn {
   font-size: 14px;
   color: #ffffff;
+  z-index: 1;
 
   @include tablet {
     display: inline-block;

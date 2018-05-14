@@ -65,6 +65,7 @@
 
   &--ig svg {
     width: 16px;
+    height: 16px;
     margin-left: 2px;
 
     @include tablet {
@@ -75,6 +76,7 @@
 
   &--fb svg {
     width: 10px;
+    height: 19px;
     margin-left: 1px;
 
     @include tablet {

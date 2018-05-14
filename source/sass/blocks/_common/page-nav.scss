@@ -13,15 +13,28 @@
   top: 0;
   right: 0;
 
+  .no-js & {
+    display: none;
+  }
+
   @include tablet {
     display: none;
   }
 }
 
 .page-nav__list {
-  display: block;
+  display: none;
 
   @include reset-list;
+
+  .no-js &,
+  .page-nav--opened & {
+    display: block;
+
+    @include tablet {
+      display: flex;
+    }
+  }
 
   @include tablet {
     display: flex;

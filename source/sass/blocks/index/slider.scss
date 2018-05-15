@@ -12,9 +12,9 @@
   }
 
   @include desktop {
-    padding-bottom: 35px;
+    padding-bottom: 32px;
     margin: 0;
-    background-image: linear-gradient(#ffffff 0, #ffffff 204px, $grey 204px, $grey 100%);
+    background-image: linear-gradient(#ffffff 0, #ffffff 200px, $grey 200px, $grey 100%);
     overflow: visible;
   }
 }
@@ -76,7 +76,7 @@
 
     &--after {
       box-shadow: 400px 590px 0 400px #eaeaea;
-      background-image: linear-gradient(#ffffff 0, #ffffff 190px, #eaeaea 190px, #eaeaea 100%);
+      background-image: linear-gradient(#ffffff 0, #ffffff 186px, #eaeaea 186px, #eaeaea 100%);
     }
   }
 
@@ -225,6 +225,5 @@
 
   @include desktop {
     margin-left: 0;
-    margin-top: 0;
   }
 }

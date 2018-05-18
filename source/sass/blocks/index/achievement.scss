@@ -31,15 +31,14 @@
   color: $font-grey;
   box-sizing: border-box;
   background-color: $grey;
+  display: block;
+  width: 87px;
 
   @include tablet {
     padding: 0 6px;
     font-size: 14px;
     background-color: #ffffff;
-
-    br {
-      display: none;
-    }
+    width: auto;
   }
 
   @include desktop {

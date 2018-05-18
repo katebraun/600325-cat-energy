@@ -15,10 +15,6 @@
   </head>
 
   <body class="page">
-    <div style="display:none">
-      <include src="build/img/vector/sprite.svg"></include>
-    </div>
-
     <header class="page-header page-header--index">
       <div class="page-header__wrapper container">
         <a class="page-logo page-logo--index">
@@ -45,7 +41,7 @@
           <p class="promo__content promo__text">
             Занялся собой? Займись котом!
           </p>
-          <picture class="promo__image--wrapper">
+          <picture class="promo__image-wrapper">
             <source type="image/webp" media="(min-width: 1300px)" srcset="img/webp/index-can-desktop@1x.webp 1x, img/webp/index-can-desktop@2x.webp 2x">
             <source media="(min-width: 1300px)" srcset="img/rastr/index-can-desktop@1x.png 1x, img/rastr/index-can-desktop@2x.png 2x">
             <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/index-can-tablet@1x.webp 1x, img/webp/index-can-tablet@2x.webp 2x">
@@ -127,11 +123,11 @@
             <div class="example__row">
               <div class="example__achievements">
                 <dl class="achievement">
-                  <dt class="achievement__title">Снижение<br> веса</dt>
+                  <dt class="achievement__title">Снижение веса</dt>
                   <dd class="achievement__value">5 кг</dd>
                 </dl>
                 <dl class="achievement">
-                  <dt class="achievement__title">Затрачено<br> времени</dt>
+                  <dt class="achievement__title">Затрачено времени</dt>
                   <dd class="achievement__value">60 дней</dd>
                 </dl>
               </div>
@@ -240,8 +236,10 @@
         </section>
       </div>
     </footer>
-
-  <script src="js/menu.min.js"></script>
-  <script src="js/picturefill.min.js"></script>
+    <div style="display:none">
+      <include src="build/img/vector/sprite.svg"></include>
+    </div>
+    <script src="js/menu.min.js"></script>
+    <script src="js/picturefill.min.js"></script>
   </body>
 </html>

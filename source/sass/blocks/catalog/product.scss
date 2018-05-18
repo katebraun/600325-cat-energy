@@ -143,7 +143,12 @@
     background: url("../img/vector/icon-gift.svg") no-repeat center;
 
     @include tablet {
+      margin: 50px 42px;
       width: 237px;
+    }
+
+    @include desktop {
+      margin: 50px 0;
     }
   }
 
@@ -160,6 +165,7 @@
   font-family: $arial;
   line-height: 20px;
   color: #ffffff;
+  padding: 0 50px;
 
   @include tablet {
     flex-grow: 0;
@@ -167,10 +173,15 @@
     width: 285px;
     text-align: left;
     line-height: 20px;
+    padding-left: 186px;
+    padding-right: 100px;
   }
 
   @include desktop {
+    padding: 0;
     margin-top: 12px;
     text-align: center;
+    display: block;
+    width: 180px;
   }
 }

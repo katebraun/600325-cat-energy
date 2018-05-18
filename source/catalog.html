@@ -16,10 +16,6 @@
   </head>
 
   <body class="page">
-    <div style="display:none">
-      <include src="build/img/vector/sprite.svg"></include>
-    </div>
-
     <header class="page-header">
       <div class="page-header__wrapper container">
         <a class="page-logo" href="index.html">
@@ -77,7 +73,7 @@
                 </table>
               </div>
             </div>
-            <a href="#" class="page__btn">Заказать</a>
+            <a href="#" class="page__btn page__btn--catalog">Заказать</a>
           </li>
           <li class="catalog__item">
             <div class="product">
@@ -109,7 +105,7 @@
                 </table>
               </div>
             </div>
-            <a href="#" class="page__btn">Заказать</a>
+            <a href="#" class="page__btn page__btn--catalog">Заказать</a>
           </li>
           <li class="catalog__item">
             <div class="product">
@@ -141,7 +137,7 @@
                 </table>
               </div>
             </div>
-            <a href="#" class="page__btn">Заказать</a>
+            <a href="#" class="page__btn page__btn--catalog">Заказать</a>
           </li>
           <li class="catalog__item">
             <div class="product">
@@ -173,7 +169,7 @@
                 </table>
               </div>
             </div>
-            <a href="#" class="page__btn">Заказать</a>
+            <a href="#" class="page__btn page__btn--catalog">Заказать</a>
           </li>
           <li class="catalog__item">
             <div class="product">
@@ -205,7 +201,7 @@
                 </table>
               </div>
             </div>
-            <a href="#" class="page__btn">Заказать</a>
+            <a href="#" class="page__btn page__btn--catalog">Заказать</a>
           </li>
           <li class="catalog__item">
             <div class="product">
@@ -237,7 +233,7 @@
                 </table>
               </div>
             </div>
-            <a href="#" class="page__btn">Заказать</a>
+            <a href="#" class="page__btn page__btn--catalog">Заказать</a>
           </li>
           <li class="catalog__item">
             <div class="product">
@@ -269,7 +265,7 @@
                 </table>
               </div>
             </div>
-            <a href="#" class="page__btn">Заказать</a>
+            <a href="#" class="page__btn page__btn--catalog">Заказать</a>
           </li>
           <li class="catalog__item catalog__item--more">
             <div class="more-products">
@@ -277,7 +273,7 @@
               <h3 class="more-products__title page__block-title">Показать еще 100500 товаров</h3>
               <p class="more-products__text page__text">На самом деле вкусов гораздо больше!</p>
             </div>
-            <a href="#" class="page__btn page__btn--grey">Показать все</a>
+            <a href="#" class="page__btn page__btn--grey page__btn--catalog">Показать все</a>
           </li>
         </ul>
       </section>
@@ -318,14 +314,11 @@
           </ul>
           <div class="additional__promotion promotion">
             <p class="promotion__text">
-              Закажите все <br>
-              и получите чехол для <br>
-              кота в подарок!
+              Закажите все и&nbsp;получите чехол&nbsp;для кота в&nbsp;подарок!
             </p>
           </div>
         </div>
       </section>
-
     </main>
 
     <footer class="page-footer">
@@ -389,8 +382,10 @@
         </section>
       </div>
     </footer>
-
-  <script src="js/menu.min.js"></script>
-  <script src="js/picturefill.min.js"></script>
+    <div style="display:none">
+      <include src="build/img/vector/sprite.svg"></include>
+    </div>
+    <script src="js/menu.min.js"></script>
+    <script src="js/picturefill.min.js"></script>
   </body>
 </html>

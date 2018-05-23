@@ -26,13 +26,13 @@
 }
 
 .promo__wrapper {
-  @include container
-
   position: relative;
   padding-bottom: 22px;
   text-align: center;
   color: #ffffff;
   z-index: 0;
+
+  @include container;
 
   @include tablet {
     display: flex;
@@ -50,7 +50,6 @@
   padding: 20px 0;
   font-size: 36px;
   line-height: 36px;
-  font-weight: 400;
 
   &--top {
     padding-top: 27px;

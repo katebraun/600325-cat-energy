@@ -1,5 +1,5 @@
 .program-form__wrapper {
-  @include container
+  @include container;
 
   @include desktop {
     display: flex;
@@ -9,7 +9,7 @@
 }
 
 .program-form__wrapper-top {
-  @include container
+  @include container;
 }
 
 .program-form__text {
@@ -35,7 +35,7 @@
 }
 
 .program-form__footer {
-  @include container
+  @include container;
 
   padding-top: 22px;
   padding-bottom: 10px;

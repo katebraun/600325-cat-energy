@@ -11,7 +11,7 @@
 }
 
 .page-footer__bottom {
-  @include container
+  @include container;
 
   @include tablet {
     display: flex;

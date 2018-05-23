@@ -17,7 +17,7 @@
 }
 
 .example__wrapper {
-  @include container
+  @include container;
 
   @include desktop {
     padding-right: 0;

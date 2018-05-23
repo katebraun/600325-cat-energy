@@ -5,7 +5,7 @@
 }
 
 .program__wrapper {
-  @include container
+  @include container;
 
   @include desktop {
     padding: 0;
@@ -123,8 +123,6 @@
     padding-top: 5px;
     padding-bottom: 37px;
     padding-left: 1px;
-    font-size: 16px;
-    line-height: 1.5;
     border-bottom: 0;
   }
 

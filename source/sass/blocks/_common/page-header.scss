@@ -29,7 +29,7 @@
 }
 
 .page-header__wrapper {
-  @include container
+  @include container;
 
   @include tablet {
     display: flex;

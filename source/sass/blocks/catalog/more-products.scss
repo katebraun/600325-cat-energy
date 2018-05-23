@@ -52,7 +52,6 @@
   text-transform: uppercase;
   color: #222222;
   padding-bottom: 6px;
-  text-transform: uppercase;
   margin-top: -3px;
   margin-bottom: 1px;
 
@@ -69,7 +68,6 @@
 
 .more-products__text {
   font-family: "Arial", sans-serif;
-  font-size: 14px;
   line-height: 18px;
   margin-top: 0;
   margin-bottom: 20px;
@@ -77,9 +75,7 @@
 
   @include tablet {
     font-size: 16px;
-    line-height: 1.5;
     width: 170px;
-    font-size: 16px;
     line-height: 20px;
     margin-bottom: 82px;
   }

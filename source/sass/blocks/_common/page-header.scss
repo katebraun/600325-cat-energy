@@ -29,6 +29,8 @@
 }
 
 .page-header__wrapper {
+  @include container
+
   @include tablet {
     display: flex;
     justify-content: space-between;

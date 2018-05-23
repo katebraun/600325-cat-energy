@@ -5,7 +5,6 @@
   text-align: center;
 }
 
-
 .more-products__icon {
   position: relative;
   margin: 26px 0;
@@ -47,6 +46,11 @@
 }
 
 .more-products__title {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #222222;
   padding-bottom: 6px;
   text-transform: uppercase;
   margin-top: -3px;
@@ -64,11 +68,16 @@
 }
 
 .more-products__text {
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
   margin-top: 0;
   margin-bottom: 20px;
   font-size: 12px;
 
   @include tablet {
+    font-size: 16px;
+    line-height: 1.5;
     width: 170px;
     font-size: 16px;
     line-height: 20px;
@@ -83,4 +92,9 @@
 
 .more-products__btn {
   margin-top: auto;
+}
+
+.more-products__link {
+  text-decoration: none;
+  color: #000000;
 }

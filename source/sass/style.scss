@@ -7,7 +7,8 @@
 @import "global/basic.scss";
 
 // Common
-@import "blocks/_common/page.scss";
+
+@import "blocks/_common/btn.scss";
 @import "blocks/_common/page-header.scss";
 @import "blocks/_common/page-logo.scss";
 @import "blocks/_common/menu-toggle.scss";
@@ -28,8 +29,10 @@
 // Catalog
 @import "blocks/catalog/catalog.scss";
 @import "blocks/catalog/product.scss";
+@import "blocks/catalog/promotion.scss";
 @import "blocks/catalog/more-products.scss";
 @import "blocks/catalog/additional.scss";
+@import "blocks/catalog/additional-item.scss";
 
 // Form
 @import "blocks/form/program-form.scss";

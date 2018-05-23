@@ -26,6 +26,8 @@
 }
 
 .promo__wrapper {
+  @include container
+
   position: relative;
   padding-bottom: 22px;
   text-align: center;
@@ -44,9 +46,30 @@
 
 .promo__title {
   font-weight: 400;
+  margin: 0;
+  padding: 20px 0;
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 400;
+
+  &--top {
+    padding-top: 27px;
+  }
+
+  @include tablet {
+    margin-left: 87px;
+    padding: 32px 0 38px;
+    font-size: 60px;
+    line-height: 60px;
+  }
 
   @include desktop {
+    margin-left: 90px;
     margin-top: 34px;
+
+    &--top {
+      padding-top: 48px;
+    }
   }
 }
 
@@ -56,6 +79,7 @@
   font-size: 14px;
   font-weight: 400;
   text-transform: uppercase;
+  margin-left: 87px;
 
   @include tablet {
     font-size: 20px;
@@ -64,6 +88,7 @@
   }
 
   @include desktop {
+    margin-left: 90px;
     padding-bottom: 25px;
   }
 }
@@ -72,18 +97,7 @@
   @include tablet {
     display: flex;
     justify-content: center;
-    order: 2;
     width: 100%;
-  }
-}
-
-.promo__content {
-  @include tablet {
-    margin-left: 87px;
-  }
-
-  @include desktop {
-    margin-left: 90px;
   }
 }
 
@@ -123,6 +137,8 @@
     padding: 16px 27px;
     font-size: 20px;
     margin-left: 89px;
+    margin-top: -582px;
+    margin-bottom: 529px;
   }
 
   @include desktop {

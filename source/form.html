@@ -5,9 +5,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
-    <script>
-      document.documentElement.classList.remove("no-js");
-    </script>
     <link rel="preload" href="css/style.min.css" as="style">
     <link rel="preload" href="js/menu.min.js" as="script">
     <link rel="preload" href="fonts/oswaldregular.woff2" as="font">
@@ -17,7 +14,7 @@
 
   <body class="page">
     <header class="page-header">
-      <div class="page-header__wrapper container">
+      <div class="page-header__wrapper">
         <a class="page-logo" href="index.html" >
           <picture>
             <source media="(min-width: 1300px)" srcset="img/vector/logo-desktop.svg">
@@ -40,30 +37,30 @@
       <h1 class="visually-hidden">Cat Energy</h1>
 
       <form class="program-form" action="http://echo.htmlacademy.ru" method="post">
-        <div class="container">
-          <h2 class="page__title page__title--top">Подбор программы</h2>
+        <div class="program-form__wrapper-top">
+          <h2 class="program-form__title program-form__title--top">Подбор программы</h2>
           <p class="program-form__text">
             Заполните анкету и мы подберем программу питания для вашего кота
           </p>
         </div>
 
-        <div class="program-form__wrapper container">
+        <div class="program-form__wrapper">
           <section class="form-block form-block--no-title">
             <h3 class="visually-hidden">Введите личные данные кота</h3>
             <p class="form-block__row">
-              <label class="form-block__item page__block-title">
+              <label class="form-block__item form-block__block-title">
                 <span class="form-block__label">Имя:*</span>
                 <input type="text" class="form-block__input" name="Имя" placeholder="Барсик" required>
               </label>
             </p>
             <p class="form-block__row">
-              <label class="form-block__item page__block-title">
+              <label class="form-block__item form-block__block-title">
                 <span class="form-block__label">Вес (кг):*</span>
                 <input type="text" class="form-block__input" name="Вес" placeholder="7" required>
               </label>
             </p>
             <p class="form-block__row">
-              <label class="form-block__item page__block-title">
+              <label class="form-block__item form-block__block-title">
                 <span class="form-block__label">Возраст (лет):</span>
                 <input type="text" class="form-block__input" name="Возраст" placeholder="7">
               </label>
@@ -74,19 +71,19 @@
             <h3 class="visually-hidden">Выберите программу</h3>
             <ul class="form-block__list">
               <li class="form-block__list-item">
-                <label class="form-block__item page__block-title">
+                <label class="form-block__item form-block__block-title">
                   <input type="radio" name="Программа" value="Похудение" class="form-block__radio visually-hidden" checked>
                   <span class="form-block__label form-block__label--radio">Похудение</span>
                 </label>
               </li>
               <li class="form-block__list-item">
-                <label class="form-block__item page__block-title">
+                <label class="form-block__item form-block__block-title">
                   <input type="radio" name="Программа" value="Набор массы" class="form-block__radio visually-hidden">
                   <span class="form-block__label form-block__label--radio">Набор массы</span>
                 </label>
               </li>
               <li class="form-block__list-item">
-                <label class="form-block__item page__block-title">
+                <label class="form-block__item form-block__block-title">
                   <input type="radio" name="Программа" value="Не знаю (Нужен ваш совет)" class="form-block__radio visually-hidden">
                   <span class="form-block__label form-block__label--radio">Не знаю (Нужен ваш совет)</span>
                 </label>
@@ -96,10 +93,10 @@
         </div>
 
         <section class="form-block form-block--margin">
-          <h3 class="form-block__title page__subtitle"><span>Контактные данные<br>&nbsp;(владельца&nbsp;кота)</span></h3>
-          <div class="program-form__wrapper container">
+          <h3 class="form-block__title form-block__subtitle form-block__title--contacts"><span>Контактные данные<br>&nbsp;(владельца&nbsp;кота)</span></h3>
+          <div class="form-block__wrapper">
             <p class="form-block__row">
-              <label class="form-block__item page__block-title">
+              <label class="form-block__item form-block__block-title">
                 <span class="form-block__label">E-mail:*</span>
                 <span class="form-block__input-wrapper">
                   <input type="email" class="form-block__input" name="E-mail" placeholder="kuklachev@gmail.com">
@@ -110,7 +107,7 @@
               </label>
             </p>
             <p class="form-block__row">
-              <label class="form-block__item page__block-title">
+              <label class="form-block__item form-block__block-title">
                 <span class="form-block__label--phone form-block__label">Телефон:*</span>
                 <span class="form-block__input-wrapper">
                   <input type="tel" class="form-block__input" name="Телефон" placeholder="8 (960) 900-60-90">
@@ -124,10 +121,10 @@
         </section>
 
         <section class="form-block">
-          <h3 class="form-block__title page__subtitle"><span>Комментарий</span></h3>
-          <div class="container">
+          <h3 class="form-block__title form-block__subtitle"><span>Комментарий</span></h3>
+          <div class="form-block__wrapper">
             <p class="form-block__row form-block__row--textarea">
-              <label class="form-block__item page__block-title">
+              <label class="form-block__item form-block__block-title">
                 <textarea class="form-block__input form-block__input--textarea" name="Комментарий" cols="28" rows="4" placeholder="Расскажите обо всех повадках кота"></textarea>
               </label>
             </p>
@@ -135,29 +132,29 @@
         </section>
 
         <section class="form-block">
-          <h3 class="form-block__title form-block__title--last page__subtitle"><span>Дополнительно</span></h3>
-          <div class="container">
+          <h3 class="form-block__title form-block__title--last form-block__subtitle"><span>Дополнительно</span></h3>
+          <div class="form-block__wrapper">
             <ul class="form-block__list form-block__list--checkbox">
               <li class="form-block__list-item">
-                <label class="form-block__item page__block-title">
+                <label class="form-block__item form-block__block-title">
                   <input type="checkbox" name="sweetener" class="form-block__checkbox visually-hidden" checked>
                   <span class="form-block__label form-block__label--checkbox">Сахарозаменитель</span>
                 </label>
               </li>
               <li class="form-block__list-item">
-                <label class="form-block__item page__block-title">
+                <label class="form-block__item form-block__block-title">
                   <input type="checkbox" name="water" class="form-block__checkbox visually-hidden">
                   <span class="form-block__label form-block__label--checkbox">Питьевая вода</span>
                 </label>
               </li>
               <li class="form-block__list-item">
-                <label class="form-block__item page__block-title">
+                <label class="form-block__item form-block__block-title">
                   <input type="checkbox" name="milk" class="form-block__checkbox visually-hidden">
                   <span class="form-block__label form-block__label--checkbox">Молоко</span>
                 </label>
               </li>
               <li class="form-block__list-item">
-                <label class="form-block__item page__block-title">
+                <label class="form-block__item form-block__block-title">
                   <input type="checkbox" name="vitamins" class="form-block__checkbox visually-hidden">
                   <span class="form-block__label form-block__label--checkbox">Витамины</span>
                 </label>
@@ -166,9 +163,9 @@
           </div>
         </section>
 
-        <footer class="program-form__footer container">
-          <button class="program-form__submit-btn page__btn">Отправить заявку</button>
-          <p class="program-form__note page__text">* — Обязательные поля</p>
+        <footer class="program-form__footer">
+          <button class="program-form__submit-btn btn">Отправить заявку</button>
+          <p class="program-form__note">* — Обязательные поля</p>
         </footer>
       </form>
     </main>
@@ -177,10 +174,10 @@
       <div class="contacts">
         <div class="contacts__text-wrapper">
           <div class="contacts__text">
-            <p class="contacts__half contacts__promo page__block-title">
+            <p class="contacts__half contacts__promo">
               Приглашаем к&nbsp;сотрудничеству дилеров!
             </p>
-            <p class="contacts__half contacts__address page__text">
+            <p class="contacts__half contacts__address">
               ул. Большая Конюшенная, д. 19/8
               <span class="contacts__city">Санкт-Петербург</span>
             </p>
@@ -191,7 +188,7 @@
         </div>
       </div>
 
-      <div class="page-footer__bottom container">
+      <div class="page-footer__bottom">
         <div class="page-footer__item page-logo page-logo--footer">
           <a class="page-logo__title" href="index.html">
             <img src="img/vector/logo-footer.svg" alt="Cat Energy" width="128" height="24">

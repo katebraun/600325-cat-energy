@@ -1,3 +1,5 @@
+document.documentElement.classList.remove("no-js");
+
 (function () {
   var nav = document.querySelector('.page-nav');
   var toggle = nav.querySelector('.page-nav__toggle');

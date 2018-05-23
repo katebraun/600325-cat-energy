@@ -33,7 +33,7 @@
   @include tablet {
     justify-content: space-between;
     align-items: center;
-    padding: 63px 72px 58px 71px;
+    padding: 60px 72px 50px 71px;
 
     &--white {
       background-color: #ffffff;
@@ -61,7 +61,14 @@
 }
 
 .contacts__promo {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #222222;
+
   @include tablet {
+    font-size: 20px;
     line-height: 25px;
   }
 
@@ -76,6 +83,7 @@
   line-height: 20px;
 
   @include tablet {
+    line-height: 1.5;
     font-size: 16px;
     text-align: right;
   }

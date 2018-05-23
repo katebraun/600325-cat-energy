@@ -18,15 +18,39 @@
 }
 
 .additional__title {
+  position: relative;
   margin-top: 29px;
   margin-bottom: 33px;
+  margin-left: -1px;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1;
+  background-image: linear-gradient(to bottom, transparent 0, transparent 14px, $green 14px, $green 17px, transparent 17px, transparent 100%);
+
+  span {
+    display: table;
+    padding: 0 20px;
+    background-color: #ffffff;
+  }
 
   @include tablet {
+    padding: 0 calc((100vw - 708px) / 2);
+    font-size: 36px;
     margin-top: 33px;
     margin-bottom: 80px;
+    background-image: linear-gradient(to bottom, transparent 0, transparent 22px, $green 22px, $green 25px, transparent 25px, transparent 100%);
+
+    br {
+      display: none;
+    }
+
+    span {
+      padding: 0 38px;
+    }
   }
 
   @include desktop {
+    padding: 0 calc((100vw - 1300px) / 2);
     margin-top: 39px;
   }
 }
@@ -41,93 +65,5 @@
 
   @include desktop {
     margin-bottom: 0;
-  }
-}
-
-.additional__item {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding-bottom: 17px;
-  border-bottom: 1px solid $border-grey;
-
-  &:first-child {
-    border-top: 1px solid $border-grey;
-  }
-
-  @include tablet {
-    padding: 16px 36px 12px;
-    border-left: 1px solid $border-grey;
-    border-right: 1px solid $border-grey;
-    align-content: center;
-    align-items: center;
-  }
-
-  @include desktop {
-    padding: 15px 0 16px;
-    border-left: 0;
-    border-right: 0;
-  }
-}
-
-.additional__name {
-  margin: 13px 0;
-  line-height: 1;
-
-  @include tablet {
-    margin: 8px 0 12px 2px;
-  }
-
-  @include desktop {
-    width: 325px;
-    margin: 10px 0 10px 2px;
-  }
-}
-
-.additional__details {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  margin-top: -1px;
-  margin-bottom: 12px;
-  color: $font-grey;
-
-  @include tablet {
-    width: auto;
-    margin-top: 6px;
-    margin-bottom: 0;
-  }
-
-  @include desktop {
-    width: 325px;
-  }
-}
-
-.additional__price {
-  flex-shrink: 0;
-  width: 95px;
-  text-align: right;
-
-  @include desktop {
-    text-align: left;
-    width: 80px;
-    margin: 2px 3px 0 0;
-  }
-}
-
-.additional__volume {
-  @include desktop {
-    margin: 2px 0 0 -1px;
-  }
-}
-
-.additional__btn {
-  @include tablet {
-    margin: 15px 0;
-  }
-
-  @include desktop {
-    margin: 0 0 0 -2px;
-    width: 245px;
   }
 }

@@ -2,11 +2,24 @@ body {
   font-size: 16px;
   line-height: 20px;
   font-family: $oswald;
+  background-color: $white;
+
+  /* <-------------- НА СЛУЧАЙ ФИКСИРОВАННОЙ СЕТКИ -------------->
+  max-width: 320px;
+  margin: 0 auto;
+
+  @include tablet {
+    max-width: 768px;
+  }
+
+  @include desktop {
+    max-width: 1300px;
+  }
+  */
 }
 
 img {
   max-width: 100%;
-  height: auto;
 }
 
 .container {

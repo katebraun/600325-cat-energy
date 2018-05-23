@@ -1,0 +1,37 @@
+.btn {
+  display: block;
+  width: 100%;
+  padding: 10px 20px;
+  font-family: $oswald;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  box-sizing: border-box;
+  color: $white;
+  background-color: $green;
+  border: none;
+
+  &:hover {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  &--grey {
+    color: $black;
+    background-color: $grey;
+
+    &:hover {
+      background-color: #ebebeb;
+    }
+
+    &:active {
+      color: rgba(0, 0, 0, 0.3);
+    }
+  }
+}

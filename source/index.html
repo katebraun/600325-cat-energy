@@ -4,9 +4,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
-    <script>
-      document.documentElement.classList.remove("no-js");
-    </script>
     <link rel="preload" href="css/style.min.css" as="style">
     <link rel="preload" href="js/menu.min.js" as="script">
     <link rel="preload" href="fonts/oswaldregular.woff2" as="font">
@@ -14,9 +11,9 @@
     <link rel="stylesheet" href="css/style.min.css">
   </head>
 
-  <body class="page">
+  <body>
     <header class="page-header page-header--index">
-      <div class="page-header__wrapper container">
+      <div class="page-header__wrapper">
         <a class="page-logo page-logo--index">
           <picture>
             <source media="(min-width: 1300px)" srcset="img/vector/logo-desktop.svg">
@@ -34,11 +31,11 @@
         </nav>
       </div>
       <section class="promo">
-        <div class="promo__wrapper container">
-          <h2 class="promo__content promo__title page__title page__title--top">
+        <div class="promo__wrapper">
+          <h2 class="promo__title promo__title--top">
             Функциональное<br>питание для котов
           </h2>
-          <p class="promo__content promo__text">
+          <p class="promo__text">
             Занялся собой? Займись котом!
           </p>
           <picture class="promo__image-wrapper">
@@ -49,7 +46,7 @@
             <source type="image/webp" srcset="img/webp/index-can-mobile@1x.webp 1x, img/webp/index-can-mobile@2x.webp 2x">
             <img class="promo__image" src="img/rastr/index-can-mobile@1x.png" alt="Внешний вид товара" width="280" height="270">
           </picture>
-          <a class="promo__content promo__btn page__btn" href="form.html">
+          <a class="promo__btn btn" href="form.html">
             Подобрать программу
           </a>
         </div>
@@ -61,13 +58,13 @@
 
       <section class="program">
         <h2 class="visually-hidden">Программы тренировок</h2>
-        <div class="program__wrapper container">
+        <div class="program__wrapper">
           <article class="program__item program__item--slim">
             <h3 class="program__title">
               <span class="program__icon program__icon--slim"></span>
               Похудение
             </h3>
-            <p class="program__description page__text">
+            <p class="program__description">
               Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.
             </p>
             <a href="catalog.html" class="program__link">Каталог Slim</a>
@@ -77,7 +74,7 @@
               <span class="program__icon program__icon--pro"></span>
               Набор массы
             </h3>
-            <p class="program__description page__text">
+            <p class="program__description">
               Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!
             </p>
             <a href="catalog.html" class="program__link">Каталог Pro</a>
@@ -86,26 +83,26 @@
       </section>
 
       <section class="features">
-        <div class="container">
-          <h2 class="page__title">Как это работает</h2>
+        <div class="features__wrapper">
+          <h2 class="features__title">Как это работает</h2>
           <ul class="features__list">
             <li class="features__item features__item--leaf">
-              <p class="features__text page__text">
+              <p class="features__text">
                 Функциональное питание содержит только полезные питательные вещества.
               </p>
             </li>
             <li class="features__item features__item--powder">
-              <p class="features__text page__text">
+              <p class="features__text">
                 Выпускается в виде порошка, который нужно лишь залить кипятком и готово.
               </p>
             </li>
             <li class="features__item features__item--dining">
-              <p class="features__text page__text">
+              <p class="features__text">
                 Замените один-два приема обычной еды на наше функциональное питание.
               </p>
             </li>
             <li class="features__item features__item--clock">
-              <p class="features__text page__text">
+              <p class="features__text">
                 Уже через месяц наслаждайтесь изменениями к лучшему<br> вашего питомца!
               </p>
             </li>
@@ -113,10 +110,10 @@
         </div>
       </section>
       <section class="example">
-        <div class="example__wrapper container">
+        <div class="example__wrapper">
           <div class="example__content">
-            <h2 class="example__title page__title">Живой пример</h2>
-            <p class="example__text page__text">
+            <h2 class="example__title">Живой пример</h2>
+            <p class="example__text">
               Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без
               изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
             </p>
@@ -179,10 +176,10 @@
       <div class="contacts">
         <div class="contacts__text-wrapper">
           <div class="contacts__text contacts__text--white">
-            <p class="contacts__half contacts__promo page__block-title">
+            <p class="contacts__half contacts__promo">
               Приглашаем к&nbsp;сотрудничеству дилеров!
             </p>
-            <p class="contacts__half contacts__address page__text">
+            <p class="contacts__half contacts__address">
               ул. Большая Конюшенная, д. 19/8
               <span class="contacts__city">Санкт-Петербург</span>
             </p>
@@ -193,7 +190,7 @@
         </div>
       </div>
 
-      <div class="page-footer__bottom container">
+      <div class="page-footer__bottom">
         <div class="page-footer__item page-logo page-logo--index page-logo--footer">
           <a class="page-logo__title">
             <img src="img/vector/logo-footer.svg" alt="Cat Energy" width="128" height="24">

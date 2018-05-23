@@ -11,6 +11,8 @@
 }
 
 .page-footer__bottom {
+  @include container
+
   @include tablet {
     display: flex;
     justify-content: space-between;

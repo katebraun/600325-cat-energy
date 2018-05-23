@@ -21,3 +21,19 @@
     @content;
   }
 }
+
+@mixin container {
+  min-width: $mobile-width;
+  margin: 0 auto;
+  padding: 0 $mobile-paddings;
+  box-sizing: border-box;
+
+  @include tablet {
+    padding: 0 $tablet-pads;
+  }
+
+  @include desktop {
+    padding: 0 $desktop-pads;
+    max-width: $desktop-width;
+  }
+}
